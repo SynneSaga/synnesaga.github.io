@@ -48,22 +48,46 @@ background-color: #717171;
 /* Fading animation */
 .fade {
 -webkit-animation-name: fade;
--webkit-animation-duration: 3.5s;
+-webkit-animation-duration: 2.5s;
 animation-name: fade;
-animation-duration: 3.5s;
+animation-duration: 2.5s;
 }
 
 @-webkit-keyframes fade {
-from {opacity: .4} 
+from {opacity: .6} 
 to {opacity: 1}
 }
 
 @keyframes fade {
-from {opacity: .4} 
+from {opacity: .6} 
 to {opacity: 1}
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
 .text {font-size: 11px}
+}
+
+
+
+/*knapp*/
+
+.myButton {
+	box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size: 2vw;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+}
+.myButton:hover {
+	background-color:#b34332;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }

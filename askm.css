@@ -54,7 +54,7 @@
     margin-top: 125px;
     margin-bottom: 250px;*/
     /*border: 6px groove rgb(189, 4, 4);*/
-    font-family: monospace;
+    font-family: Verdana, Tahoma, sans-serif;
     font-size: 3vmin;
     background-color:white;
     flex-direction: column;
@@ -109,7 +109,7 @@
 }
 
 .undertittel {
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 6vmin;
 }
 
@@ -131,17 +131,17 @@
     order: 3;
 }
 
-/*align-items: center;
-    flex-basis: auto;*/
 
 
-.nedremeny {
+/*meny nederst på siden, hvis du foretrekker det*/
+
+/*.nedremeny {
     background-color: rgb(189, 4, 4);
     order:3;
     font-family: monospace;
-    font-size: 3vmin;
+    font-size: 2vmin;
 
-    /*© 2021*/
+    © 2021
 }
 
 #nmeny {
@@ -161,12 +161,12 @@
     overflow: hidden;
     display: block;
     background-color:  rgb(189, 4, 4);
-    color: black;
+    color: rgb(117, 18, 18);
 }
 
 #nmeny li {
     display: block;
-    color: black;
+    color: rgb(117, 18, 18);
     text-align: center; 
     margin: 5px;
     padding-right: 7px;
@@ -176,6 +176,6 @@
 #nmeny a:hover {
     background-color:  rgb(187, 53, 53);
 }
-  
+*/
 
         
