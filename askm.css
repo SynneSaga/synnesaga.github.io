@@ -1,4 +1,4 @@
-.bakgrunnsbilde {
+.bakgrunnsfarge {
     /*background-image: url("chuttersnap-xbeg3GcblgM-unsplash.jpg");*/
     height: auto;
     width: auto;
@@ -7,6 +7,7 @@
     background-size: 100% 100%;
     position: static;
     background-attachment: fixed;
+    margin: 40px;
 }
 
 

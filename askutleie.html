@@ -1,12 +1,13 @@
 <html>
     <head>
         <title>Ask menighetshus</title>
-        <link rel="icon" href="dnki.png">
+        <link rel="icon" href="bilder/dnki.png">
         <link rel="stylesheet" type="text/css" href="askm.css">
         <link rel="stylesheet" type="text/css" href="slideshowtest.css">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body class="bakgrunnsbilde">
+    <body class="bakgrunnsfarge">
             <div class="midt">
                 <div class="menyen">
                     <ul id="meny">
@@ -66,75 +67,67 @@
                                 Øyvind Fluge Styreleder</p>
                        
                     </div>
+
                     <div class="bilde">
-                        <img src="inne1.jpg" alt="Innsiden av huset" style="width:38vw" >
-                        <img src="inne21.png" alt="Innsiden av huset" style="width:38vw" >
-                        <img src="inne32.png" alt="Innsiden av huset" style="width:38vw" >
-                        <img src="inne4.png" alt="Innsiden av huset" style="width:38vw" >
-                        <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="slideshowtest.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    </head>
-        <body>
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <!--<div class="numbertext">1 / 4</div>-->
+                                <img src="bilder/inne1.jpg" style="width:100%">
+                                <!--<div class="text">Eventuell tekst</div>-->
+                            </div>
 
-        <h2>Automatic Slideshow</h2>
-        <p>Change image every 2 seconds:</p>
+                            <div class="mySlides fade">
+                                <!--<div class="numbertext">2 / 4</div>-->
+                                <img src="bilder/inne21.png" style="width:100%">
+                            </div>
 
-        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <!--<div class="numbertext">3 / 4</div>-->
+                                <img src="bilder/inne32.png" style="width:100%">
+                            </div>
 
-        <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="sheep.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-        </div>
+                            <div class="mySlides fade">
+                                <!--<div class="numbertext">4 / 4</div>-->
+                                <img src="bilder/inne4.png" style="width:100%">
+                            </div>
 
-        <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="sheep.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
-        </div>
+                            <div class="mySlides fade">
+                                <!--<div class="numbertext">4 / 4</div>-->
+                                <img src="bilder/inne5.png" style="width:100%">
+                            </div>
+                        </div>
+                        <br>
 
-        <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="sheep.jpg" style="width:100%">
-        <div class="text">Caption Three</div>
-        </div>
+                        <div style="text-align:center">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        </div>
 
-        </div>
-        <br>
+                        <script>
+                        var slideIndex = 0;
+                        showSlides();
 
-        <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        </div>
+                        function showSlides() {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {slideIndex = 1}    
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";  
+                        dots[slideIndex-1].className += " active";
+                        setTimeout(showSlides, 2000); // Change image every 2 seconds
+                        }
+                        </script>
 
-        <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-        </script>
-
-    </body>
-</html> 
+                    
 
                     </div>
                 </div>
