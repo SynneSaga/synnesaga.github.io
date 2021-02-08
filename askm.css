@@ -63,7 +63,11 @@
     display:flex;
     flex-direction:row;
     order:1;
-    flex: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    overflow:auto; 
 }
 
 .menyen {
@@ -113,16 +117,9 @@
     margin: 50px;
     line-height: 1.5em;
 }
-
-.midtbilde {
-    background-image: url("hus.png");
+.bilde {
     flex:1;
-    min-width: 300px;
-    margin: 60px;
-    width: 100%;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: contain;
+    
 }
 .footer {
     align-self: center;
