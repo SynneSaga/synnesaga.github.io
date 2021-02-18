@@ -1,0 +1,10 @@
+.body {
+    display: grid;
+    height: 100vh;
+    
+    grid-template-rows: auto 1fr auto;
+}
+
+.vanligtekst {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
