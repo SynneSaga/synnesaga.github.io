@@ -11,21 +11,8 @@
     margin: auto;
   }
   #option1 {
-    position: relative;
-    display: inline-block;
-    height: 40px;
+    
     width: 100px;
-    margin-left: 0.7291666666666666em;
-    margin-right: 0.7291666666666666em;
-    background-clip: content-box;
-    text-align: center;
-    cursor: pointer;
-    font: bold 19px serif;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
   }
   .themes {
     display: block;
