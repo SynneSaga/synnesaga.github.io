@@ -1,17 +1,14 @@
 .body {
     display: grid;
     height: 100vh;
-    
     grid-template-rows: auto 1fr auto;
+    background-color: grey;
 }
 
 #option_list {
     height: 40px;
-    width: 500px;
-    margin: auto;
   }
   #option1 {
-    
     width: 100px;
   }
   .themes {
@@ -24,7 +21,7 @@
     color: white;
   }
   #dropDownMenu {
-    margin:10px;
+    margin:0px;
   }
   #option1:hover #dropDownMenu {
     display: block;
