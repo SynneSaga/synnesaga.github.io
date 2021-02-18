@@ -1,91 +1,12 @@
 <html>
     <head>
-        <title>Ask menighetshus</title>
-        <link rel="icon" href="bilder/dnki.png">
-        <link rel="stylesheet" type="text/css" href="askm.css">
-        <link rel="stylesheet" type="text/css" href="slideshowtest.css">
-        <link rel="script" type="text/script" href="bildeshow.js">
+        <title>Min hovedside</title>
+        <link rel="stylesheet" type="text/css" href="melk/stilark.css">
+        <link rel="stylesheet" type="text/css" href="melk/dark-stilark.css">
+        <link rel="script" type="text/script" href="melk/java.js">
         <meta charset="UTF-8">
     </head>
-    <body class="bakgrunnsfarge">
-            <div class="midt">
-                <div class="menyen">
-                    <ul id="meny">
-                        <li><a href="index.html">Startside</a></li>
-                        <li><a href="askutleie.html">Utleie</a></li>
-                        <li><a href="askhisto.html">Historikk</a></li>
-                        <li><a href="askkontakt.html">Kontakt oss</a></li>  
-                    </ul>
-                </div>
-                <div class="header">
-                    <p>Ask menighetshus<p>
-                </div>
+    <body>
 
-                <div class="innimidt">
-                    <div class="midttekst">
-                        <p> Ask menighetshus ble bygget i 1939, 
-                            men er blitt påbygget og rehabilitert 
-                            flere ganger. Resultatet er blitt et 
-                            trivelig og tjenlig hus som det er 
-                            ganske populært å leie til ulike 
-                            arrangementer. Kjøkkenet ble nytt i 
-                            2014 og må sies å være et «storkjøkken» 
-                            i passelig format for ca. 100 gjester. 
-                            Salen har også plass til ca. 100 gjester, 
-                            men rundt 60 er optimalt.
-                            Huset holder alt nødvendig dekketøy, 
-                            mens duker kan leies. Vi har et godt 
-                            høyttaleranlegg og en ypperlig projektor. 
-                            Tar en med seg en bærbar pc eller minnepinne, 
-                            er det utstyr for enkelpåkobling. Toalettfasilitetene er nye, også for 
-                            funksjonshemmede. Huset blir mye brukt  
-                            til minnesamvær, dåps- og konfirmasjons-
-                            middager. Bryllupsfest har vært arrangert 
-                            flere ganger. Også runde dager feires i huset.
-                            Vi understreker at det ikke er tillatt med alkoholservering.
-                            </p>
-                    </div>
-                    <div class="bilde">
-                        <div class="slideshow-container">
-                            <div class="mySlides fade">
-                                <img src="bilder/hus.png" style="width:100%">
-                            </div>
-
-                            <div class="mySlides fade">
-                                <img src="bilder/hus2.png" style="width:100%">
-                            </div>
-                        </div>
-                        <br>
-
-                        <div style="text-align:center">
-                        <span class="dot"></span> 
-                        <span class="dot"></span> 
-                        </div>
-
-                        <script>
-                        var slideIndex = 0;
-                        showSlides();
-
-                        function showSlides() {
-                        var i;
-                        var slides = document.getElementsByClassName("mySlides");
-                        var dots = document.getElementsByClassName("dot");
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";  
-                        }
-                        slideIndex++;
-                        if (slideIndex > slides.length) {slideIndex = 1}    
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                        }
-                        slides[slideIndex-1].style.display = "block";  
-                        dots[slideIndex-1].className += " active";
-                        setTimeout(showSlides, 2000); // Change image every 2 seconds
-                        }
-                        </script>
-                    </div>
-                </div>
-
-            </div>
     </body>
 </html>
