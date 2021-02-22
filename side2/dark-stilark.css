@@ -6,10 +6,28 @@ body {
     text-decoration: none;
 }
 
+body.dark-theme {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    background-color: rgb(31, 24, 24);
+    text-decoration: none;
+
+}
+
 .header {
     font-size: 3vw;
     color: rgb(179, 179, 179);
     background-color: rgb(20, 34, 34);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.header.dark-theme {
+    font-size: 3vw;
+    color: rgb(179, 179, 179);
+    background-color: rgb(67, 128, 128);
     display: flex;
     align-content: center;
     justify-content: center;
@@ -25,11 +43,6 @@ body {
     font-size: 2vw;
     text-decoration: none;
 }
-  body.dark-theme {
-    color: #eee;
-    background: #121212;
-    
-  }
   
   /*a {
     color: #0033cc;

@@ -3,6 +3,7 @@
         <title>Min hovedside</title>
         <link id="darkTheme" rel="stylesheet" type="text/css" href="side2/dark-stilark.css">
         <script type="text/javascript" src="side2/java.js"></script>
+        <script type="text/javascript" src="side2/knapp.js"></script>
         <meta charset="UTF-8">
     </head>
     <body>
@@ -14,7 +15,16 @@
             <a href="side2/index.html">Sjokolademelk</a><br>
         </div>
         <div class="footer">
-            <button class="btn-toggle">Toggle Dark-Mode</button>
+
+            <button id="knapp" onclick="myFunction">Toggle Dark-Mode</button>
+            <script>
+                document.getElementById("knapp").addEventListener("click", myFunction);
+                
+                function myFunction() {
+                    document.body.classList.toggle("dark-theme");
+                }
+            </script>
+            
         </div>
     </body>
 </html>
