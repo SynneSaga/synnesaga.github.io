@@ -36,6 +36,21 @@ body.dark-theme {
 .hoveddel {
     font-size: 2vw;
     text-decoration: none;
+    display:flex;
+    flex-direction: row;
+}
+
+.hoveddel.dark-theme {
+    font-size: 2vw;
+    text-decoration: none;
+}
+
+.bokser {
+    flex:1;
+    margin:50px;
+    background-color: rgb(206, 205, 205);
+    border-radius: 10px;
+    padding:10px;
 
 }
 
@@ -50,3 +65,11 @@ body.dark-theme {
   body.dark-theme a {
     color: #809fff;
   }*/
+
+  .knappklasse {
+      background: url("bilder/morkknapp.png") no-repeat scroll 0 0 transparent;
+  }
+
+  .knappklasse.dark-theme {
+    background: url("bilder/morklysknapp.png") no-repeat scroll 0 0 transparent;;
+}

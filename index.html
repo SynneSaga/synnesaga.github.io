@@ -5,18 +5,33 @@
         <script type="text/javascript" src="side2/java.js"></script>
         <script type="text/javascript" src="side2/knapp.js"></script>
         <meta charset="UTF-8">
+        <script> 
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+            if (prefersDarkScheme.matches) {
+            document.body.classList.add("dark-theme");
+            } else {
+            document.body.classList.remove("dark-theme"); 
+            
+            }
+        </script>
     </head>
     <body>
         <div class="header">
-            <p>Liste over nettsider:</p><br>
+            <p>Mine nettsider/testområde</p><br>
         </div>
         <div class="hoveddel">
-            <a href="askm/askmindex.html">Ask menighetshus</a><br>
-            <a href="side2/index.html">Sjokolademelk</a><br>
+            <div class="bokser">
+                <a  style="text-decoration: none;" href="askm/askmindex.html">Ask menighetshus</a><br>
+                <a style="text-decoration: none;" href="side2/index.html">Sjokolademelk</a><br>
+            </div>
+            <div class="bokser">
+                <p>Hey</p>
+            </div>
+            
         </div>
         <div class="footer">
 
-            <button id="knapp" onclick="myFunction">Toggle Dark-Mode</button>
+            <button class="knappklasse" id="knapp" onclick="myFunction">Toggle Dark-Mode</button>
             <script>
                 document.getElementById("knapp").addEventListener("click", myFunction);
                 
