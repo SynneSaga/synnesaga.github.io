@@ -2,10 +2,8 @@
     <head>
         <title>Min hovedside</title>
         <link id="darkTheme" rel="stylesheet" type="text/css" href="side2/dark-stilark.css">
-        <script type="text/javascript" src="side2/java.js"></script>
-        <script type="text/javascript" src="side2/knapp.js"></script>
         <meta charset="UTF-8">
-        <script> 
+        <!--<script> 
             const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
             if (prefersDarkScheme.matches) {
             document.body.classList.add("dark-theme");
@@ -13,7 +11,7 @@
             document.body.classList.remove("dark-theme"); 
             
             }
-        </script>
+        </script>-->
     </head>
     <body>
         <div class="header">
@@ -25,13 +23,14 @@
                 <a style="text-decoration: none; color: black;" href="side2/index.html">Sjokolademelk</a><br>
             </div>
             <div class="bokser">
-                <p>Hey</p>
+                <p>Hey<br>
+                Tabell???</p>
             </div>
             
         </div>
         <div class="footer">
 
-            <button class="knappklasse" id="knapp" onclick="myFunction">Toggle Dark-Mode</button>
+            <button id="knapp" class="knappklasse" onclick="myFunction">Toggle Dark-Mode</button>
             <script>
                 document.getElementById("knapp").addEventListener("click", myFunction);
                 
