@@ -24,10 +24,11 @@ body {
 .footer {
   font-size: 2vw;
   text-decoration: none;
+  
 }
 
 
-#option_list {
+/*#option_list {
   height: 40px;
   
 }
@@ -84,4 +85,17 @@ body {
 }
 .themes:hover {
   background-color: rgba(3, 3, 3, 0.51);
+}
+*/
+
+.knappklasse {
+  background: url("bilder/morkknapp.png") no-repeat scroll 0 0 transparent;
+}
+
+.knappklasse.dark-theme {
+background: url("bilder/morklysknapp.png") no-repeat scroll 0 0 transparent;
+}
+
+#knapp {
+  position: absolute;
 }
