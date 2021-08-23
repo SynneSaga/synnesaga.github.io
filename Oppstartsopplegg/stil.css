@@ -45,7 +45,46 @@ header {
     font-display: swap;
 }
 
+iframe {
+    margin-top: 10px;
+}
+
 .bilder {
     width:800px;
     max-height: auto;
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color:white;
+}
+
+/*bakgrunn, vær samme farge, de er layered oppå hverandre, vet egt ikke forksjell?*/
+::-webkit-scrollbar-track {
+    background:rgb(202, 202, 202);
+    /*border-radius: 10px;*/
+}
+
+/*Denne er visst øverst, over scrolltingen?*/
+::-webkit-scrollbar-track-piece {
+    background:rgba(255, 255, 255, 0);
+    /*border-radius: 10px;*/
+}
+
+/*Ting som dras*/
+::-webkit-scrollbar-thumb {
+    background:rgba(64,24,0,255);
+    /*border-radius: 10px;*/
+}
+
+
+/*små knapper øverst
+::-webkit-scrollbar-button {
+    background-size: 100%;
+}
+::-webkit-scrollbar-button:start {
+    background-color: white;
+}
+::-webkit-scrollbar-button:end {
+    background-color: white;
+}*/
