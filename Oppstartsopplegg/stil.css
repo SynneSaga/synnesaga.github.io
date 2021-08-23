@@ -1,0 +1,46 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 40fr 1fr;
+    grid-template-rows: 0.5fr 2fr 2fr;
+    grid-template-areas: "header header header"
+                        ". main ."            
+                        "footer footer footer";
+    background-color: rgb(202, 202, 202);
+    margin: 0;
+    font-family: 'Pixel UniCode';
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    background-color: rgba(64,24,0,255);
+}
+
+header {
+    font-size: xx-large;
+    color:white;
+    text-decoration: overline underline;
+    padding: 50px;
+    text-align: center;
+}
+
+.main {
+    margin-top: 1vw;
+    grid-area: main;
+    justify-self: center;
+    width: 100%;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 15px;
+}
+
+/*Fontgreier*/
+
+@font-face {
+    font-family: 'Pixel UniCode';
+    src: url("Gotham-Font/Gotham-Bold.otf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
