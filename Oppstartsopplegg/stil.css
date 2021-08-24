@@ -1,28 +1,39 @@
 body {
     display: grid;
-    grid-template-columns: 1fr 40fr 1fr;
-    grid-template-rows: 0.1fr 2fr 2fr;
+    grid-template-columns: 1fr 30fr 1fr;
+    grid-template-rows: 0.1fr 2fr 2fr 2fr;
     grid-template-areas: "header header header"
-                        ". main ."            
+                        ". main ."  
+                        ". dings ."          
                         "footer footer footer";
     background-color: rgb(202, 202, 202);
     margin: 0;
     font-family: 'Pixel UniCode';
 }
 
-.header {
+#header {
     grid-area: header;
     width: 100%;
     background-color: rgba(64,24,0,255);
     max-height: 12vw;
+    position: fixed;
+    font-size: 4.5vw;
+    transition: 0.3s;
 }
 
 header {
-    font-size: xx-large;
     color:white;
     text-decoration: overline underline;
     padding: 50px;
     text-align: center;
+}
+
+#header.stor {
+    background-color:rgba(64,24,0,255);
+    background-attachment:fixed;
+    font-size: 3vw;
+    max-height: 7vw;
+    margin: 0;
 }
 
 .main {
@@ -32,7 +43,19 @@ header {
     background-color: rgba(250,248,249,255);
     padding: 1vw;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top: 170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "tekst bilde1";
+}
+
+.tekst {
+    grid-area: tekst;
+}
+
+.bilde1 {
+    grid-area: bilde1;
 }
 
 /*Fontgreier*/
@@ -50,7 +73,7 @@ iframe {
 }
 
 .bilder {
-    width:800px;
+    width:400px;
     max-height: auto;
 }
 
@@ -88,3 +111,39 @@ iframe {
 ::-webkit-scrollbar-button:end {
     background-color: white;
 }*/
+
+.dings {
+    grid-area: dings;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "dream youtube bilde2";
+    background-color: rgba(250,248,249,255);
+    padding: 1vw;
+    border-radius: 15px;
+    margin-top: 20px;
+    column-gap: 20px;
+    justify-self: center;
+    width: 100%;
+}
+
+.dream {
+    grid-area: dream;
+}
+
+.spotify {
+    width:100%;
+}
+
+.youtube
+    {grid-area: youtube;
+}
+
+.video {
+    border-radius:10px;
+    width:100%;
+}
+
+.bilde2 {
+    grid-area: bilde2;
+}
