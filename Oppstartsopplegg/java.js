@@ -7,23 +7,18 @@ window.onscroll = function() {scrollFunction()};
     }
   }
 
-
-window.onload=function(){
+window.onload = function(){
     const btn = document.querySelector(".lysmodus");
     const theme = document.querySelector("#tema-link");
      
     btn.addEventListener("click", function() {
       if (theme.getAttribute("href") == "stil.css") {
         theme.href = "dark-stil.css";
-      } 
-
-      else {
+      } else {
         theme.href = "stil.css";
       }
-    });
-    }
-
-    
+  });
+}
 
 function startTime() {
     const today = new Date();

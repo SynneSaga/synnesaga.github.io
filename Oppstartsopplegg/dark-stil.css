@@ -165,3 +165,11 @@ iframe {
     text-decoration: none;
 }
 
+
+#klokke {
+    color:white;
+    position: fixed;
+    right:20px;
+    top:30px;
+}
+

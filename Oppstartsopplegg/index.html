@@ -7,12 +7,12 @@
     <script type="text/javascript" src="java.js"></script>
     <title>Repetisjon bcs korttidshukommelse</title>
 </head>
-<body>
+<body onload="startTime()">
     <div id="header">
         <header>Overskrift</header>
     </div>
     <div class="main">
-        <div class="tekst">
+        <div class="tekst1">
             <p style="font-size: large;">Underskrift</p>
             <p>Den viktige delen av dokumentet</p>
             <p>According 🔛 to YouTube 😐 statistics 📶, only a small 🤏❌ percentage ➗ of people 👥 who watch 👀 my videos 📹 are actually 😤 subscribed 💯. So if you 👈 end ➡ up 🆙 liking 👍 this video 🎥, consider 🤔 subscribing. It's free 🆓 and you 👈 can always ♾ unsubscribe 👋🏻👈🏻✌🏻. Enjoy 🥳 the video 📼.</p><br>
@@ -27,7 +27,6 @@
         </div>
     </div>
     <div class="dings">
-        
         <iframe class="dream spotify" src="https://open.spotify.com/embed/episode/7GKyP23rRwkFe1gClIbm9v" height="232" width="auto" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         <iframe class="youtube ytvideo" height="315" width="auto" src="https://www.youtube.com/embed/YXfHmMKlQwk"></iframe>
         <video autoplay muted loop id="video">
@@ -35,9 +34,9 @@
         </video>
         <div class="clock">
             <p>Alle</p>
-            <p id="klokke" onload="startTime()"></div>
         </div>
     </div>
+    <div id="klokke"></div>
     <a href="#" class="lysmodus">Dark/light mode</a>
 </body>
 </html>
