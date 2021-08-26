@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="stil.css">
+    <link rel="stylesheet" type="text/css" href="stil.css" id="tema-link">
     <script type="text/javascript" src="java.js"></script>
     <title>Repetisjon bcs korttidshukommelse</title>
 </head>
@@ -27,9 +27,17 @@
         </div>
     </div>
     <div class="dings">
+        
         <iframe class="dream spotify" src="https://open.spotify.com/embed/episode/7GKyP23rRwkFe1gClIbm9v" height="232" width="auto" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <iframe class="youtube video" height="315" width="auto" src="https://www.youtube.com/embed/YXfHmMKlQwk"></iframe>
-        <img class="bilde2 bilder" src="Bilder/tt.png">
+        <iframe class="youtube ytvideo" height="315" width="auto" src="https://www.youtube.com/embed/YXfHmMKlQwk"></iframe>
+        <video autoplay muted loop id="video">
+        <source src="Bilder/andersfail.mp4" type="video/mp4">
+        </video>
+        <div class="clock">
+            <p>Alle</p>
+            <p id="klokke" onload="startTime()"></div>
+        </div>
     </div>
+    <a href="#" class="lysmodus">Dark/light mode</a>
 </body>
 </html>

@@ -6,7 +6,7 @@ body {
                         ". main ."  
                         ". dings ."          
                         "footer footer footer";
-    background-color: rgb(202, 202, 202);
+    background-color: rgb(61, 58, 58);
     margin: 0;
     font-family: 'Pixel UniCode';
 }
@@ -14,8 +14,8 @@ body {
 #header {
     grid-area: header;
     width: 100%;
-    background-color: rgba(64,24,0,255);
-    color:white;
+    background-color: black;
+    color:gray;
     max-height: 13vw;
     position: fixed;
     font-size: 4.5vw;
@@ -40,7 +40,7 @@ header {
     grid-area: main;
     justify-self: center;
     width: 100%;
-    background-color: rgba(250,248,249,255);
+    background-color: gray;
     padding: 1vw;
     border-radius: 15px;
     margin-top: 120px;
@@ -96,21 +96,10 @@ iframe {
 
 /*Ting som dras*/
 ::-webkit-scrollbar-thumb {
-    background:rgba(64,24,0,255);
+    background:black;
     /*border-radius: 10px;*/
 }
 
-
-/*små knapper øverst
-::-webkit-scrollbar-button {
-    background-size: 100%;
-}
-::-webkit-scrollbar-button:start {
-    background-color: white;
-}
-::-webkit-scrollbar-button:end {
-    background-color: white;
-}*/
 
 .dings {
     grid-area: dings;
@@ -119,7 +108,7 @@ iframe {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "dream youtube bilde2"
                                 ". clock .";
-    background-color: rgba(250,248,249,255);
+    background-color: gray;
     padding: 1vw;
     border-radius: 15px;
     margin-top: 20px;
@@ -154,10 +143,13 @@ iframe {
     grid-area: bilde2;
 }
 
+
+
 .clock {
     grid-area: clock;
     font-size: 20px;
 }
+
 
 /*Alt til dark theme*/
 .lysmodus {
@@ -167,14 +159,9 @@ iframe {
     display: inline-block;
     border: 5px ridge;
     border-radius: 5px;
-    background-color: white;
+    background-color: black;
     padding:10px;
-    color:black;
+    color:white;
     text-decoration: none;
 }
 
-/*klokken*/
-
-#klokke {
-    color:black;
-}
