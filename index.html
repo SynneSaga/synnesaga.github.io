@@ -19,11 +19,11 @@
         </div>
         <div class="hoveddel">
             <div class="bokser" id="hjelp">
-                <a  style="text-decoration: none;" href="askm/askmindex.html">Ask menighetshus</a><br>
-                <a style="text-decoration: none;" href="side2/index.html">Sjokolademelk</a><br>
+                <a id="a" style="text-decoration: none;" href="askm/askmindex.html">Ask menighetshus</a><br>
+                <a id="b" style="text-decoration: none;" href="side2/index.html">Sjokolademelk</a><br>
             </div>
             <div class="bokser" id="help">
-                <a style="text-decoration: none;" href="#">Nye greier ig</a>
+                <a id="c" style="text-decoration: none;" href="#">Nye greier ig</a>
                 <img src="side2/bilder/monkerd.png" style="width: 100%;">
             </div>
             
@@ -40,6 +40,12 @@
             var element = document.getElementById("help");
             element.classList.toggle("dark-theme");
             var element = document.getElementById("header");
+            element.classList.toggle("dark-theme");
+            var element = document.getElementById("a");
+            element.classList.toggle("dark-theme");
+            var element = document.getElementById("b");
+            element.classList.toggle("dark-theme");
+            var element = document.getElementById("c");
             element.classList.toggle("dark-theme");
                     }
             </script>

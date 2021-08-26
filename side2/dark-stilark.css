@@ -16,7 +16,7 @@ body.dark-theme {
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr auto;
-    background-color: rgb(31, 24, 24);
+    background-color: rgb(85, 85, 85);
     text-decoration: none;
     margin:0px;
 
@@ -34,8 +34,8 @@ body.dark-theme {
 
 .header.dark-theme {
     font-size: 3vw;
-    color: rgb(179, 179, 179);
-    background-color: rgb(20, 34, 34);
+    color: rgb(201, 201, 201);
+    background-color: rgb(68, 99, 99);
     display: flex;
     align-content: center;
     justify-content: center;
@@ -45,7 +45,21 @@ body.dark-theme {
     text-decoration: none;
     display:flex;
     flex-direction: row;
-    
+}
+
+a {
+    color:black;
+}
+
+a.dark-theme {
+    color: rgb(201, 201, 201);
+}
+a:visited {
+    color:black;
+}
+
+a:visited.dark-theme {
+    color: rgb(201, 201, 201);
 }
 
 .bokser {
@@ -55,8 +69,8 @@ body.dark-theme {
     background-color: white;
     border-radius: 10px;
     padding:20px;
-    color:black;
 }
+
 
 .bokser.dark-theme {
     font-size: 2vw;
@@ -65,7 +79,6 @@ body.dark-theme {
     background-color: black;
     border-radius: 10px;
     padding:20px;
-    color:white;
 }
 
 .bokser:visited {
@@ -74,8 +87,6 @@ body.dark-theme {
     background-color: white;
     border-radius: 10px;
     padding:20px;
-    color:black;
-
 }
 
 .bokser.dark-theme:visited {
@@ -84,8 +95,6 @@ body.dark-theme {
     background-color: black;
     border-radius: 10px;
     padding:20px;
-    color:white;
-
 }
 
 .footer {
