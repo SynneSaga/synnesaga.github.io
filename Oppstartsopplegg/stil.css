@@ -1,7 +1,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 30fr 1fr;
-    grid-template-rows: 0.1fr 2fr 2fr 2fr;
+    grid-template-rows: 0.1fr 2fr 2fr 0.3fr;
     grid-template-areas: "header header header"
                         ". main ."  
                         ". dings ."          
@@ -9,6 +9,7 @@ body {
     background-color: rgb(202, 202, 202);
     margin: 0;
     font-family: 'Pixel UniCode';
+    row-gap: 30px;
 }
 
 #header {
@@ -43,7 +44,7 @@ header {
     background-color: rgba(250,248,249,255);
     padding: 1vw;
     border-radius: 15px;
-    margin-top: 120px;
+    margin-top: 90px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -122,19 +123,18 @@ iframe {
     background-color: rgba(250,248,249,255);
     padding: 1vw;
     border-radius: 15px;
-    margin-top: 20px;
     column-gap: 20px;
     justify-self: center;
     width: 100%;
+    padding: 15px 20px;
 }
 
 .dream {
     grid-area: dream;
+    width:100%;
+    color:black;
 }
 
-.spotify {
-    width:100%;
-}
 
 .youtube {
     grid-area: youtube;
@@ -148,6 +148,7 @@ iframe {
 #video {
     border-radius:10px;
     width: 100%;
+    margin-top:10px;
 }
 
 .bilde2 {
@@ -215,4 +216,29 @@ iframe {
 #tilbake.stor {
     font-size: medium;
     top:27px;
+}
+
+
+.footer {
+    grid-area:footer;
+    justify-self: center;
+    width: 100%;
+    background-color: rgba(64,24,0,255);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "venstre midt";
+    grid-gap:20px;
+    color:white;
+
+}
+
+
+.venstre {
+    grid-area:venstre;
+    margin:10px;
+}
+
+.midt {
+    grid-area: midt;
 }

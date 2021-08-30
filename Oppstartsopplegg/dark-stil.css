@@ -1,7 +1,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 30fr 1fr;
-    grid-template-rows: 0.1fr 2fr 2fr 2fr;
+    grid-template-rows: 0.1fr 2fr 2fr 0.3fr;
     grid-template-areas: "header header header"
                         ". main ."  
                         ". dings ."          
@@ -9,6 +9,7 @@ body {
     background-color: rgb(61, 58, 58);
     margin: 0;
     font-family: 'Pixel UniCode';
+    row-gap: 30px;
 }
 
 #header {
@@ -43,7 +44,7 @@ header {
     background-color: gray;
     padding: 1vw;
     border-radius: 15px;
-    margin-top: 120px;
+    margin-top: 90px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -92,15 +93,12 @@ iframe {
 /*Denne er visst øverst, over scrolltingen?*/
 ::-webkit-scrollbar-track-piece {
     background:rgba(255, 255, 255, 0);
-    /*border-radius: 10px;*/
 }
 
 /*Ting som dras*/
 ::-webkit-scrollbar-thumb {
     background:black;
-    /*border-radius: 10px;*/
 }
-
 
 .dings {
     grid-area: dings;
@@ -112,7 +110,6 @@ iframe {
     background-color: gray;
     padding: 1vw;
     border-radius: 15px;
-    margin-top: 20px;
     column-gap: 20px;
     justify-self: center;
     width: 100%;
@@ -126,8 +123,8 @@ iframe {
     width:100%;
 }
 
-.youtube
-    {grid-area: youtube;
+.youtube {
+    grid-area: youtube;
 }
 
 .ytvideo {
@@ -159,6 +156,7 @@ iframe {
     color:black;
 }
 
+
 /*Alt til dark theme*/
 .lysmodus {
     position: fixed;
@@ -173,6 +171,7 @@ iframe {
     text-decoration: none;
 }
 
+/*klokken*/
 
 #klokke {
     color:lightgray;
@@ -201,7 +200,24 @@ iframe {
 }
 
 #tilbake.stor {
-    font-size:medium;
+    font-size: medium;
     top:27px;
 }
 
+
+.footer {
+    grid-area:footer;
+    justify-self: center;
+    width: 100%;
+    background-color: black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". midt";
+    grid-gap:20px;
+    color:white;
+}
+
+.midt {
+    grid-area: midt;
+}
