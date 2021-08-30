@@ -213,7 +213,7 @@ iframe {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: ". midt";
+    grid-template-areas: "venstre midt";
     grid-gap:20px;
     color:white;
 }
@@ -221,3 +221,5 @@ iframe {
 .midt {
     grid-area: midt;
 }
+
+.venstre {grid-area:venstre}
