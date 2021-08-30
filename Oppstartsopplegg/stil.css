@@ -46,7 +46,7 @@ header {
     border-radius: 15px;
     margin-top: 90px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: 1fr;
     grid-template-areas: "tekst1 bilde1";
 }
