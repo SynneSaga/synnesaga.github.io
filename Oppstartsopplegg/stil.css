@@ -203,6 +203,9 @@ iframe {
 
 .tilbake {
     position:fixed;
-    left:10px;
-    top:10px;
+    left:20px;
+    top:30px;
+    color:white;
+    text-decoration: none;
+    font-size: x-large;
 }
