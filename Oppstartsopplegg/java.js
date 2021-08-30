@@ -2,12 +2,14 @@ window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
     if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
        document.getElementById("header").className = "stor";
+       document.getElementById("klokke").className = "stor";
     } else {
       document.getElementById("header").className = "";
+      document.getElementById("klokke").className = "";
     }
   }
 
-window.onload = function(){
+function farger(){
     const btn = document.querySelector(".lysmodus");
     const theme = document.querySelector("#tema-link");
      

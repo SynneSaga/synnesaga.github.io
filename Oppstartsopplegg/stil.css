@@ -118,7 +118,7 @@ iframe {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "dream youtube bilde2"
-                                "tekst2 tekst3 tekst4";
+                        "tekst2 tekst3 tekst4";
     background-color: rgba(250,248,249,255);
     padding: 1vw;
     border-radius: 15px;
@@ -136,8 +136,8 @@ iframe {
     width:100%;
 }
 
-.youtube
-    {grid-area: youtube;
+.youtube {
+    grid-area: youtube;
 }
 
 .ytvideo {
@@ -191,4 +191,18 @@ iframe {
     position: fixed;
     right:20px;
     top:30px;
+    font-size:x-large;
+    transition: 0.3s;
+}
+
+#klokke.stor {
+    font-size:medium;
+}
+
+/*menyen*/
+
+.tilbake {
+    position:fixed;
+    left:10px;
+    top:10px;
 }

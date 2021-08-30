@@ -47,15 +47,16 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "tekst bilde1";
+    grid-template-areas: "tekst1 bilde1";
 }
 
-.tekst {
-    grid-area: tekst;
+.tekst1 {
+    grid-area: tekst1;
 }
 
 .bilde1 {
     grid-area: bilde1;
+    display: none;
 }
 
 /*Fontgreier*/
@@ -107,7 +108,7 @@ iframe {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "dream youtube bilde2"
-                                ". clock .";
+                        "tekst2 tekst3 tekst4";
     background-color: gray;
     padding: 1vw;
     border-radius: 15px;
@@ -143,13 +144,20 @@ iframe {
     grid-area: bilde2;
 }
 
-
-
-.clock {
-    grid-area: clock;
-    font-size: 20px;
+.tekst2 {
+    grid-area: tekst2;
+    color:black;
 }
 
+.tekst3 {
+    grid-area: tekst3;
+    color:black;
+}
+
+.tekst4 {
+    grid-area: tekst4;
+    color:black;
+}
 
 /*Alt til dark theme*/
 .lysmodus {
@@ -171,5 +179,10 @@ iframe {
     position: fixed;
     right:20px;
     top:30px;
+    font-size:x-large;
+    transition: 0.3s;
 }
 
+#klokke.stor {
+    font-size:medium;
+}
