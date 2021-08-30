@@ -209,17 +209,21 @@ iframe {
     grid-area:footer;
     justify-self: center;
     width: 100%;
-    background-color: black);
+    background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "venstre midt";
     grid-gap:20px;
-    color:white;
+    color:lightgray;
 }
 
 .midt {
     grid-area: midt;
+    margin:10px;
 }
 
-.venstre {grid-area:venstre}
+.venstre {
+    grid-area:venstre;
+    margin:10px;
+}

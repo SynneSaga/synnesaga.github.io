@@ -241,4 +241,5 @@ iframe {
 
 .midt {
     grid-area: midt;
+    margin:10px;
 }
