@@ -3,9 +3,11 @@ window.onscroll = function() {scrollFunction()};
     if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
        document.getElementById("header").className = "stor";
        document.getElementById("klokke").className = "stor";
+       document.getElementById("tilbake").className = "stor";
     } else {
       document.getElementById("header").className = "";
       document.getElementById("klokke").className = "";
+      document.getElementById("tilbake").className = "";
     }
   }
 

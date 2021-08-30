@@ -175,7 +175,7 @@ iframe {
 
 
 #klokke {
-    color:white;
+    color:gray;
     position: fixed;
     right:20px;
     top:30px;
@@ -186,3 +186,20 @@ iframe {
 #klokke.stor {
     font-size:medium;
 }
+
+/*menyen*/
+
+#tilbake {
+    position:fixed;
+    left:20px;
+    top:30px;
+    text-decoration: none;
+    font-size: x-large;
+    transition: 0.3s;
+    color:gray;
+}
+
+#tilbake.stor {
+    font-size:medium;
+}
+
