@@ -15,7 +15,7 @@ body {
     grid-area: header;
     width: 100%;
     background-color: black;
-    color:gray;
+    color:lightgray;
     max-height: 13vw;
     position: fixed;
     font-size: 4.5vw;
@@ -175,31 +175,33 @@ iframe {
 
 
 #klokke {
-    color:gray;
+    color:lightgray;
     position: fixed;
     right:20px;
-    top:30px;
+    top:40px;
     font-size:x-large;
     transition: 0.3s;
 }
 
 #klokke.stor {
     font-size:medium;
+    top:27px;
 }
 
 /*menyen*/
 
 #tilbake {
+    color:lightgray;
     position:fixed;
     left:20px;
-    top:30px;
+    top:40px;
     text-decoration: none;
     font-size: x-large;
     transition: 0.3s;
-    color:gray;
 }
 
 #tilbake.stor {
     font-size:medium;
+    top:27px;
 }
 
