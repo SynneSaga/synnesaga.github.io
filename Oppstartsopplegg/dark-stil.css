@@ -1,12 +1,12 @@
 body {
     display: grid;
-    grid-template-columns: 1fr 30fr 1fr;
-    grid-template-rows: 0.1fr 2fr 2fr 0.3fr;
+    grid-template-columns: 2fr 30fr 2fr;
+    grid-template-rows: 0.1fr auto auto auto;
     grid-template-areas: "header header header"
                         ". main ."  
                         ". dings ."          
                         "footer footer footer";
-    background-color: rgb(61, 58, 58);
+    background-color: rgb(202, 202, 202);
     margin: 0;
     font-family: 'Pixel UniCode';
     row-gap: 30px;
@@ -15,8 +15,8 @@ body {
 #header {
     grid-area: header;
     width: 100%;
-    background-color: black;
-    color:lightgray;
+    background-color: rgba(64,24,0,255);
+    color:white;
     max-height: 13vw;
     position: fixed;
     font-size: 4.5vw;
@@ -41,12 +41,12 @@ header {
     grid-area: main;
     justify-self: center;
     width: 100%;
-    background-color: gray;
-    padding: 1vw;
+    background-color: rgba(250,248,249,255);
     border-radius: 15px;
-    margin-top: 90px;
+    margin-top: 120px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding:2vw;
+    grid-template-columns: auto auto;
     grid-template-rows: 1fr;
     grid-template-areas: "tekst1 bilde1";
 }
@@ -55,9 +55,11 @@ header {
     grid-area: tekst1;
 }
 
+.svart {
+    display:none;
+}
 .bilde1 {
     grid-area: bilde1;
-    display: none;
 }
 
 /*Fontgreier*/
@@ -71,7 +73,7 @@ header {
 }
 
 iframe {
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 .bilder {
@@ -93,35 +95,53 @@ iframe {
 /*Denne er visst øverst, over scrolltingen?*/
 ::-webkit-scrollbar-track-piece {
     background:rgba(255, 255, 255, 0);
+    /*border-radius: 10px;*/
 }
 
 /*Ting som dras*/
 ::-webkit-scrollbar-thumb {
-    background:black;
+    background:rgba(64,24,0,255);
+    /*border-radius: 10px;*/
 }
+
+
+/*små knapper øverst
+::-webkit-scrollbar-button {
+    background-size: 100%;
+}
+::-webkit-scrollbar-button:start {
+    background-color: white;
+}
+::-webkit-scrollbar-button:end {
+    background-color: white;
+}*/
 
 .dings {
     grid-area: dings;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     grid-template-areas: "dream youtube bilde2"
                         "tekst2 tekst3 tekst4";
-    background-color: gray;
-    padding: 1vw;
+    background-color: rgba(250,248,249,255);
     border-radius: 15px;
-    column-gap: 20px;
+    padding:2vw;
     justify-self: center;
     width: 100%;
+    column-gap: 1vw;
 }
 
 .dream {
     grid-area: dream;
+    max-width:100%;
+    color:black;
 }
 
 .spotify {
-    width:100%;
+    border-radius:15px;
+    max-width: 100%;
 }
+
 
 .youtube {
     grid-area: youtube;
@@ -129,17 +149,20 @@ iframe {
 
 .ytvideo {
     border-radius:10px;
-    width:100%;
-}
-
-#video {
-    border-radius:10px;
-    width: 100%;
+    max-width:100%;
 }
 
 .bilde2 {
     grid-area: bilde2;
+    background-color: black;
+    border-radius:10px;
 }
+
+#video {
+    height: 100%;
+    max-width: 100%;
+}
+
 
 .tekst2 {
     grid-area: tekst2;
@@ -163,18 +186,18 @@ iframe {
     bottom:20px;
     right:20px;
     display: inline-block;
-    border: 5px ridge;
+    border: 5px double;
     border-radius: 5px;
-    background-color: black;
+    background-color: white;
     padding:10px;
-    color:white;
+    color:black;
     text-decoration: none;
 }
 
 /*klokken*/
 
 #klokke {
-    color:lightgray;
+    color:white;
     position: fixed;
     right:20px;
     top:40px;
@@ -190,10 +213,10 @@ iframe {
 /*menyen*/
 
 #tilbake {
-    color:lightgray;
     position:fixed;
     left:20px;
     top:40px;
+    color:white;
     text-decoration: none;
     font-size: x-large;
     transition: 0.3s;
@@ -209,21 +232,68 @@ iframe {
     grid-area:footer;
     justify-self: center;
     width: 100%;
-    background-color: black;
+    background-color: rgba(64,24,0,255);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "venstre midt";
     grid-gap:20px;
-    color:lightgray;
+    color:white;
+
+}
+
+
+.venstre {
+    grid-area:venstre;
+    padding: 15px;
 }
 
 .midt {
     grid-area: midt;
-    margin:10px;
+    padding: 15px;
 }
 
-.venstre {
-    grid-area:venstre;
-    margin:10px;
+
+@media screen and (max-width: 700px) {
+
+    /*body {
+        grid-template-columns: 1fr 30fr 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr 0.3fr;
+    }
+*/
+    .main {
+        margin: 1%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "tekst1"
+                            "bilde1";
+    }
+    
+    #header {
+        font-size: 4vw;
+    }
+
+    #tilbake {
+        top:5px;
+        left:5px;
+        font-size:medium;
+    }
+
+    #klokke {
+        right:5px;
+        top:5px;
+        font-size:medium;
+    }
+
+    #klokke.stor {
+        font-size:medium;
+        top:5px;
+    }
+
+    #tilbake.stor {
+        font-size:medium;
+        top:5px;
+    }
+
+    .bilder {max-width:70%;}
 }

@@ -4,10 +4,12 @@ window.onscroll = function() {scrollFunction()};
        document.getElementById("header").className = "stor";
        document.getElementById("klokke").className = "stor";
        document.getElementById("tilbake").className = "stor";
+       document.getElementById("meny").className = "stor";
     } else {
       document.getElementById("header").className = "";
       document.getElementById("klokke").className = "";
       document.getElementById("tilbake").className = "";
+      document.getElementById("meny").className = "";
     }
   }
 
