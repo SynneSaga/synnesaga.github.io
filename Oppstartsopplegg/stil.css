@@ -57,6 +57,10 @@ header {
     grid-area: tekst1;
 }
 
+#navnet {
+    font-size: xx-large;
+}
+
 .svart {
     display:none;
 }
@@ -231,6 +235,10 @@ iframe {
 #meny.stor {
     border-right:white double;
     transition:0.3s;
+}
+
+#lang {
+    color:white;
 }
 
 #tilbake {

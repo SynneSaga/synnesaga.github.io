@@ -43,3 +43,35 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  
   return i;
 }
+
+
+document.getElementById("lang").innerHTML = ("Language: " + navigator.language);
+
+if (navigator.language == "nb.NO") {
+    console.log("Nordmann");
+    document.getElementById("språk").innerHTML = ("Nordmann, jaha");
+}
+else if (navigator.language == "en-US") {
+  console.log("ingles");
+  document.getElementById("språk").innerHTML = ("Eww American");
+  //document.getElementById("#").className = "#";
+}
+
+else if (navigator.language == "en-GB") {
+  console.log("ingles but better");
+  document.getElementById("språk").innerHTML = ("Bri'ish, ay?");
+  //document.getElementById("#").className = "#";
+}
+
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+var namn = prompt("What's your name, kiddo?");
+console.log("Hei, " + namn);
+if (namn == "") {
+  document.getElementById("navnet").innerHTML = ("Velko- nei vel :/")
+}
+
+else {document.getElementById("navnet").innerHTML = ("Velkommen, " + namn + "!")}
