@@ -50,7 +50,7 @@ let bilde = document.getElementById("bilder");
 //bilde.alt = endre alt teksten
 //bilde.width = endrer bredde
 
-let zoominn = document.getElementById("zoominn");
+let zoominn = document.getElementById("zoominnknapp");
 
 zoominn.addEventListener("click", zinn);
 function zinn() {
@@ -61,8 +61,7 @@ function zinn() {
 }
 
 
-
-let zoomut = document.getElementById("zoomut");
+let zoomut = document.getElementById("zoomutknapp");
 zoomut.addEventListener("click", zut);
 
 function zut() {
