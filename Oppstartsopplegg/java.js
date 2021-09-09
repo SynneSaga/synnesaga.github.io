@@ -44,7 +44,34 @@ function checkTime(i) {
   return i;
 }
 
+//Zoom knapper til bilde - - - - - - - - - - - - - - - - - - - - - - - - - - -
+let bilde = document.getElementById("bilder");
+//bilde.src = endrer stien til bildet
+//bilde.alt = endre alt teksten
+//bilde.width = endrer bredde
 
+let zoominn = document.getElementById("zoominn");
+
+zoominn.addEventListener("click", zinn);
+function zinn() {
+  console.log("Yess")
+  //bilde.width = 350; Endre hvis det ligger som style="" i bildet
+  //bilde.style.width = "350px"; er i stilark
+  bilde.width = bilde.width + 50;
+}
+
+
+
+let zoomut = document.getElementById("zoomut");
+zoomut.addEventListener("click", zut);
+
+function zut() {
+  console.log("thingy");
+  bilde.width = bilde.width - 50;
+}
+
+
+//Se hvilket språk som er i bruk - - - - - - - - - - - - - - - - - - - - - - 
 document.getElementById("lang").innerHTML = ("Language: " + navigator.language);
 
 if (navigator.language == "nb.NO") {

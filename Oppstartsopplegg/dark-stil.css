@@ -6,7 +6,7 @@ body {
                         ". main ."  
                         ". dings ."          
                         "footer footer footer";
-    background-color: rgb(202, 202, 202);
+    background-color: rgb(61, 58, 58);
     margin: 0;
     font-family: 'Pixel UniCode';
     row-gap: 30px;
@@ -55,9 +55,12 @@ header {
     grid-area: tekst1;
 }
 
-.svart {
+
+
+.farge {
     display:none;
 }
+
 .bilde1 {
     grid-area: bilde1;
 }

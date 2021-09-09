@@ -82,8 +82,7 @@ iframe {
     margin-top: 0;
 }
 
-.bilder {
-    width:400px;
+#bilder {
     max-height: auto;
 }
 
@@ -254,6 +253,41 @@ iframe {
 #tilbake.stor {
     font-size: medium;
     top:27px;
+}
+
+.knappområde {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#zoominn {
+    display:block;
+    border:none;
+    padding:1px;
+}
+
+#zoomut {
+    display:block;
+    border:none;
+    padding:2px;
+}
+
+.hover {
+    background-color: rgba(202, 202, 202, 0);
+    border-radius:10px;
+}
+
+.hover:hover {
+    background-color: rgba(202, 202, 202, 0.589);
+    border:white;
+
+}
+
+.knapper {
+    width:3vw;
+    height:auto;
+    flex:1;
 }
 
 
