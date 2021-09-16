@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="stil.css" id="tema-link">
     <title>Repetisjon bcs korttidshukommelse</title>
+    <link rel="icon" href="bilder/vaporwave.jpg">
 </head>
 <body onload="startTime(); farger()">
     <div id="header">
         <header>Overskrift</header>
     </div>
+    <!--Øverste boks m tekst og bilde-->
     <div class="main">
         <div class="tekst1">
             <p style="font-size: large;" id="navnet">Underskrift</p>
@@ -32,19 +34,52 @@
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="color:black;">Link til bildet</a><br>
         </div>
     </div>
+    <!--Midtboks med videoer og musikk-->
     <div class="dings">
-        <iframe class="dream spotify" src="https://open.spotify.com/embed/track/5WSdMcWTKRdN1QYVJHJWxz" height="232" frameBorder="0"  allowtransparency="true" allow="encrypted-media"></iframe>
-        <iframe class="youtube ytvideo" height="232" width="auto"  frameBorder="0" src="https://www.youtube.com/embed/ClCotNqb8VU"></iframe>
+        <!--<iframe class="dream spotify" src="https://open.spotify.com/embed/track/5WSdMcWTKRdN1QYVJHJWxz" height="232" frameBorder="0"  allowtransparency="true" allow="encrypted-media"></iframe>-->
+        <!--<iframe class="youtube ytvideo" height="232" width="auto"  frameBorder="0" src="https://www.youtube.com/embed/ClCotNqb8VU"></iframe>-->
         <div  class="bilde2"><video autoplay muted loop id="video">
         <source src="Bilder/andersfail.mp4" type="video/mp4">
         </video></div>
         <div class="tekst2">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="nomarg">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="tekst3">
+            <p>Parodi av aqua's barbie girl</p>
+        </div>
+        <div class="tekst4">
+            <p>Video fra nytt hitspill: Anderstale!</p>
         </div>
     </div>
+    <!--Nedre boks med fotoalbum-->
+    <div class="slider">
+        <div class="slidertekst">
+            <p>Dette er et fotoalbum fra min tur over vidden.<br>Var ganske gøyt, men begynte å lyne halvveis over.<br>Jaja</p>
+            <ul id="utskriftHvert">
+            </ul>
+        </div>
+        <div class="slideralbum">
+            <div class="slides">
+                <img src="Bilder/tt.png">
+            </div>
+            <div class="slides">
+                <img src="Bilder/vaporwave.jpg">
+            </div>
+            <div class="slides">
+                <img src="Bilder/tt.png">
+            </div>
+            <div class="slides">
+                <img src="Bilder/tt.png">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
     <div id="meny"></div>
     <div id="klokke"></div>
-    <a href="#" class="lysmodus">Dark/light mode</a>
+    <a href="#" class="lysmodus light">Dark mode</a>
+    <a href="#" class="lysmodus dark">Light mode</a>
     <a href="/index.html" id="tilbake">Tilbake til start</a>
     <div class="footer">
         <div class="fotområde">
