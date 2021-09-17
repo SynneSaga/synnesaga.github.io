@@ -151,6 +151,7 @@ for (let i = 0; i < arrayNamn.length; i++) {
 //<li>
 
 
+
 let question = "Hva er dette?";
 for (let bokstav of question) {
   console.log(bokstav);
@@ -182,9 +183,6 @@ let variabelNavn = {
 console.log(variabelNavn.yrke);
 
 
-let diffUtskrift = document.getElementById("diffUtskrift");
-let diffKnapp = document.getElementById("diffKnapp");
-
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -205,7 +203,63 @@ function showSlides(n) {
 }
 
 
+/*Oppgaver */
 
+//Lag email oppg. 3.4 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function lagEmail() {
+  var fornavn = document.getElementById("fornavnInput").value;
+  var etternavn = document.getElementById("etternavnInput").value;
+  var domene = document.getElementById("domeneInput").value;
+  
+  if (domene.includes("@") == true){
+    document.getElementById("mailOutput").innerText = "Ikke inkluder @ i domenenavn :(";
+  }
+
+  else if (domene == ""){
+    document.getElementById("mailOutput").innerText = "Domene kan ikke stå tomt";
+  }
+
+  else if (etternavn == ""){
+    document.getElementById("mailOutput").innerText = "Etternavn kan ikke stå tomt";
+  }
+
+  else if (fornavn == ""){
+    document.getElementById("mailOutput").innerText = "Fornavn kan ikke stå tomt";
+  }
+
+  else {
+  var helMail = (fornavn + "." + etternavn + "@" + domene + ".no");
+  
+  document.getElementById("mailOutput").innerHTML = helMail;
+  document.getElementById("mailOutput").innerText = helMail;
+  console.log(helMail);
+  }
+}
+
+
+//gatenavn oppg. 3.6.2
+
+var gate = 'Kongens gate ';
+var husnr = 432;
+var oppgang = " b";
+var adresse = gate + husnr + oppgang;
+console.log("Adressen er " + adresse);
+console.log("Gaten er " + gate + ", husnummeret er " + husnr + ", oppgang " + oppgang);
+//print(adresse);
+
+//3.8.1
+
+function finnDiff() {
+  let stedsnavnEn = document.getElementById("stedsnavnEn").value;
+  let stedsnavnTo = document.getElementById("stedsnavnTo").value;
+  
+  let lengdeStedEn = stedsnavnEn.length;
+  let lengdeStedTo = stedsnavnTo.length;
+  
+  let diffStedsnavn = Math.abs(lengdeStedEn-lengdeStedTo); 
+  console.log(diffStedsnavn);
+  document.getElementById("diffUtskrift").innerHTML = ("Mengden bokstaver forskjell: " + diffStedsnavn);
+}
 
 
 

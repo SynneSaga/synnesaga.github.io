@@ -195,7 +195,8 @@ iframe {
 
 .slider {
     grid-area:slider;
-    grid-template-columns: 1fr 2fr;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "slidertekst slideralbum";
     background-color: rgba(250,248,249,255);
@@ -217,7 +218,7 @@ iframe {
 
 .slides {
     display:none;
-    width:50%;
+    width:100%;
 }
 
 img {

@@ -55,6 +55,15 @@
     <div class="slider">
         <div class="slidertekst">
             <p>Dette er et fotoalbum fra min tur over vidden.<br>Var ganske gøyt, men begynte å lyne halvveis over.<br>Jaja</p>
+            <input type="text" id="fornavnInput" value="Fornavn"></input>
+            <input type="text" id="etternavnInput" value="Etternavn"></input>
+            <input type="text" id="domeneInput" value="Domene"></input>
+            <button onclick="lagEmail()">Knapp</button>
+            <p id ="mailOutput">Her kommer den nye mailadressen din.</p>
+            <input type="text" id="stedsnavnEn" value="Sted 1"></input>
+            <input type="text" id="stedsnavnTo" value="Sted 2"></input>
+            <button onclick="finnDiff()">Knapp2</button>
+            <p id="diffUtskrift">Mengden bokstaver forskjell: </p>
             <ul id="utskriftHvert">
             </ul>
         </div>
