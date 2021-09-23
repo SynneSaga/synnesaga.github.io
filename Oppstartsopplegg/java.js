@@ -329,6 +329,9 @@ function nesteBilde() {
 //creates a listener for when you press a key
 window.onkeyup = keyup;
 
+function fjernTekst() {
+  document.getElementById("søkeboks").value = "Search here";
+}
 //creates a global Javascript variable
 var inputTextValue;
 
@@ -344,7 +347,7 @@ function keyup(e) {
       console.log("Empty")
     }
     else {
-    window.location = "http://synnesaga.github.io/sider/search.html"; //+ inputTextValue;
+    window.location = "sider/search.html";//"http://synnesaga.github.io/sider/search.html"; + inputTextValue;
   }
   }
 }
