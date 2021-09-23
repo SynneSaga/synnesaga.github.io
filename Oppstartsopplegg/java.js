@@ -304,7 +304,7 @@ function nyeBilder() {
 let randBildeArray = ["Anderstale12", "synnebilde", "synnesvarthvitt"]; //Husk "" for hvert bilde
 //document.getElementById("bildeVis").src = "bilder/tt.png"; for test
 
-let verdi = Math.floor(Math.random() * 2);
+let verdi = Math.floor(Math.random() * 2); //randome tall fra 0 til 2
 
 let currBilde = 0;
 
@@ -347,12 +347,15 @@ function keyup(e) {
       console.log("Empty")
     }
     else {
-    window.location = "sider/search.html";//"http://synnesaga.github.io/sider/search.html"; + inputTextValue;
+      window.location = "sider/search.html";//"http://synnesaga.github.io/sider/search.html"; + inputTextValue;
+      var ting = document.getElementById("søkeboks");
+      console.log(ting);
+      document.getElementById("dispSøk").innerHTML = document.getElementById("søkeboks");
   }
   }
 }
 
-//input har id="searchtxt", div har id searchvalue
+//input har id="searchtxt", div har id searchvalue or not ig
 
 
 
