@@ -60,7 +60,9 @@ header {
     grid-area: main;
     margin-top: 120px;
     display: grid;
+
     grid-template-columns: auto auto;
+
     grid-template-rows: 1fr;
     grid-template-areas: "tekst1 bilde1";
 }
