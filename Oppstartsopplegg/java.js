@@ -325,14 +325,14 @@ function nesteBilde() {
 }
 
 
-//søkefunksjon for å søke etter en side i en side
+//søkefunksjon for å søke etter en side i en side - - - - - - - - - - - - - - - - - - -
 //creates a listener for when you press a key
 window.onkeyup = keyup;
 
 //creates a global Javascript variable
 var inputTextValue;
 
-$('#searchValue').text("https://duckduckgo.com/?q=" + inputTextValue);
+//$('#searchValue').text("https://duckduckgo.com/?q=" + inputTextValue); for nettside
 
 function keyup(e) {
   //setting your input text to the global Javascript Variable for every key press
@@ -340,7 +340,12 @@ function keyup(e) {
 
   //listens for you to press the ENTER key, at which point your web address will change to the one you have input in the search box
   if (e.keyCode == 13) {
-    window.location = "http://synnesaga.github.io/sider/search"; //+ inputTextValue;
+    if (document.getElementById("søkeboks").value.length == 0) {
+      console.log("Empty")
+    }
+    else {
+    window.location = "http://synnesaga.github.io/sider/search.html"; //+ inputTextValue;
+  }
   }
 }
 
