@@ -66,7 +66,12 @@ zoomut.addEventListener("click", zut);
 
 function zut() {
   console.log("thingy");
+  if (bilde.width < 100) {
+    bilde.width = 100;
+  }
+  else {
   bilde.width = bilde.width - 50;
+  }
 }
 
 
@@ -261,8 +266,85 @@ function finnDiff() {
   document.getElementById("diffUtskrift").innerHTML = ("Mengden bokstaver forskjell: " + diffStedsnavn);
 }
 
+function kalkuler() {
+  let kalkTallEn = document.getElementById("kalkTallEn").value;
+  let kalkOperasjon = document.getElementById("kalkOperasjon").value;
+  let kalkTallTo = document.getElementById("kalkTallTo").value;
+
+  if (kalkOperasjon == "+") {
+    let utregnet = parseInt(kalkTallEn) + parseInt(kalkTallTo);
+    document.getElementById("svaret").innerHTML = (kalkTallEn + kalkOperasjon + kalkTallTo + " er " + utregnet);
+  }
+
+  else if (kalkOperasjon == "-") {
+    let utregnet = parseInt(kalkTallEn) - parseInt(kalkTallTo);
+    document.getElementById("svaret").innerHTML = (kalkTallEn + kalkOperasjon + kalkTallTo + " er " + utregnet);
+  }
+
+  else if (kalkOperasjon == "*") {
+    let utregnet = parseInt(kalkTallEn) * parseInt(kalkTallTo);
+    document.getElementById("svaret").innerHTML = (kalkTallEn + kalkOperasjon + kalkTallTo + " er " + utregnet);
+  }
+
+  else if (kalkOperasjon == "/") {
+    let utregnet = parseInt(kalkTallEn)/parseInt(kalkTallTo);
+    document.getElementById("svaret").innerHTML = (kalkTallEn + kalkOperasjon + kalkTallTo + " er " + utregnet);
+  }
+
+  else {
+    console.log("hmm");
+    document.getElementById("svaret").innerHTML = ("Noe er feil")
+  }
+  
+}
 
 
+
+function nyeBilder() {
+let randBildeArray = ["Anderstale12", "synnebilde", "synnesvarthvitt"]; //Husk "" for hvert bilde
+//document.getElementById("bildeVis").src = "bilder/tt.png"; for test
+
+let verdi = Math.floor(Math.random() * 2);
+
+let currBilde = 0;
+
+document.getElementById("randBilde").src = "bilder/" + randBildeArray[verdi] + ".png";
+
+document.getElementById("bildeVis").src = "bilder/" + randBildeArray[currBilde] + ".png";
+
+document.getElementById("endreBilde").addEventListener("click", nesteBilde); //ikke add () etter funksjonen
+
+function nesteBilde() {
+  currBilde += 1;
+  //currBilde++; gjør akk samme
+  if (currBilde == 3) {
+    currBilde = 0;
+  }
+  document.getElementById("bildeVis").src = "bilder/" + randBildeArray[currBilde] + ".png";
+}
+}
+
+
+//søkefunksjon for å søke etter en side i en side
+//creates a listener for when you press a key
+window.onkeyup = keyup;
+
+//creates a global Javascript variable
+var inputTextValue;
+
+$('#searchValue').text("https://duckduckgo.com/?q=" + inputTextValue);
+
+function keyup(e) {
+  //setting your input text to the global Javascript Variable for every key press
+  inputTextValue = e.target.value;
+
+  //listens for you to press the ENTER key, at which point your web address will change to the one you have input in the search box
+  if (e.keyCode == 13) {
+    window.location = "http://synnesaga.github.io/sider/search"; //+ inputTextValue;
+  }
+}
+
+//input har id="searchtxt", div har id searchvalue
 
 
 

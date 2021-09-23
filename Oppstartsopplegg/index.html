@@ -7,12 +7,12 @@
     <title>Repetisjon bcs korttidshukommelse</title>
     <link rel="icon" href="bilder/vaporwave.jpg">
 </head>
-<body onload="startTime(); farger()">
+<body onload="startTime(); farger(); nyeBilder()">
     <div id="header">
         <header>Overskrift</header>
     </div>
     <!--Øverste boks m tekst og bilde-->
-    <div class="main">
+    <div class="main bakfar">
         <div class="tekst1">
             <p style="font-size: large;" id="navnet">Underskrift</p>
             <p>Importance of uhh "rejecting pleasures to secure other greater pleasures, or else endure pains to avoid worse pains"</p>
@@ -35,7 +35,7 @@
         </div>
     </div>
     <!--Midtboks med videoer og musikk-->
-    <div class="dings">
+    <div class="dings bakfar">
         <!--<iframe class="dream spotify" src="https://open.spotify.com/embed/track/5WSdMcWTKRdN1QYVJHJWxz" height="232" frameBorder="0"  allowtransparency="true" allow="encrypted-media"></iframe>-->
         <!--<iframe class="youtube ytvideo" height="232" width="auto"  frameBorder="0" src="https://www.youtube.com/embed/ClCotNqb8VU"></iframe>-->
         <div  class="bilde2"><video autoplay muted loop id="video">
@@ -52,7 +52,7 @@
         </div>
     </div>
     <!--Nedre boks med fotoalbum-->
-    <div class="slider">
+    <div class="slider bakfar">
         <div class="slidertekst">
             <p>Dette er et fotoalbum fra min tur over vidden.<br>Var ganske gøyt, men begynte å lyne halvveis over.<br>Jaja</p>
             <input type="text" id="fornavnInput" value="Fornavn"></input>
@@ -67,6 +67,7 @@
             <ul id="utskriftHvert">
             </ul>
         </div>
+
         <div class="slideralbum">
             <div class="slides">
                 <img src="Bilder/tt.png">
@@ -85,13 +86,33 @@
         </div>
     </div>
 
+    <div class="kalkulator bakfar">
+        <div class="kalk">
+            <p>Her er en kalkulator.<br>Du kan skrive inn et tall, hvilken regneoperasjon (+, -, *, /) og et annet tall.</p>
+            <input type="text" id="kalkTallEn" value="Tall">
+            <input type="text" id="kalkOperasjon" value="+,-,*,/">
+            <input type="text" id="kalkTallTo" value="Tall">
+            <button onclick="kalkuler()">Regn ut</button>
+            <p id="svaret"></p>
+            <p>Lage en søkeboks!</p>
+            <input type="text" id="søkeboks">
+            <div id="searchValue"></div>
+        </div>
+        <div class="bildeGreier">
+            <img src="#" id="randBilde">
+            <img src="Bilder/synnesvarthvitt.png" id="bildeVis">
+            <button id="endreBilde">Neste</button>
+
+        </div>
+    </div>
+
     <div id="meny"></div>
     <div id="klokke"></div>
     <a href="#" class="lysmodus light">Dark mode</a>
     <a href="#" class="lysmodus dark">Light mode</a>
     <a href="/index.html" id="tilbake">Tilbake til start</a>
     <div class="footer">
-        <div class="fotområde">
+        <div class="fotområde roedt">
         <p class="venstre" id="språk"></p>
         <p class="midt" id="lang"></p>
         </div>
