@@ -1,26 +1,30 @@
 body {
     display: grid;
-    grid-template-columns: 1fr 30fr 1fr;
-    grid-template-rows: 0.1fr 2fr 2fr 0.3fr;
+    grid-template-columns: 6.5fr 30fr 2fr;
+    grid-template-rows: 0.1fr auto auto auto auto;
     grid-template-areas: "header header header"
                         ". main ."  
-                        ". dings ."          
+                        ". dings ."
+                        ". slider ."
+                        ". kalkulator ."          
                         "footer footer footer";
     background-color: rgb(202, 202, 202);
     margin: 0;
     font-family: 'Pixel UniCode';
     row-gap: 30px;
+    line-height:2vw;
 }
 
 #header {
     grid-area: header;
     width: 100%;
-    background-color: rgba(64,24,0,255);
     color:white;
     max-height: 13vw;
     position: fixed;
     font-size: 4.5vw;
     transition: 0.3s;
+    line-height: normal;
+    background-color: rgba(64,24,0,255);
 }
 
 header {
@@ -34,19 +38,31 @@ header {
     font-size: 2.3vw;
     max-height: 6vw;
     margin: 0;
+    border:white double;
+    border-top:0;
+}
+
+/*Skal endres i dark mode*/
+.bakfar {
+    background-color: rgba(250,248,249,255);
+    border-radius: 15px;
+    padding:2vw;
+    justify-self: center;
+    width: 100%;
+}
+
+.roedt {
+    background-color: rgba(64,24,0,255);
 }
 
 
 .main {
     grid-area: main;
-    justify-self: center;
-    width: 100%;
-    background-color: rgba(250,248,249,255);
-    padding: 1vw;
-    border-radius: 15px;
-    margin-top: 90px;
+    margin-top: 120px;
     display: grid;
-    grid-template-columns: 1fr auto;
+
+    grid-template-columns: auto auto;
+
     grid-template-rows: 1fr;
     grid-template-areas: "tekst1 bilde1";
 }
@@ -55,6 +71,13 @@ header {
     grid-area: tekst1;
 }
 
+#navnet {
+    font-size: xx-large;
+}
+
+.svart {
+    display:none;
+}
 .bilde1 {
     grid-area: bilde1;
 }
@@ -70,11 +93,10 @@ header {
 }
 
 iframe {
-    margin-top: 10px;
+    margin-top: 0;
 }
 
-.bilder {
-    width:400px;
+#bilder {
     max-height: auto;
 }
 
@@ -117,22 +139,21 @@ iframe {
     grid-area: dings;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     grid-template-areas: "dream youtube bilde2"
                         "tekst2 tekst3 tekst4";
-    background-color: rgba(250,248,249,255);
-    padding: 1vw;
-    border-radius: 15px;
-    column-gap: 20px;
-    justify-self: center;
-    width: 100%;
-    padding: 15px 20px;
+    column-gap: 1vw;
 }
 
 .dream {
     grid-area: dream;
     width:100%;
     color:black;
+}
+
+.spotify {
+    border-radius:15px;
+    max-width: 100%;
 }
 
 
@@ -145,15 +166,17 @@ iframe {
     width:100%;
 }
 
-#video {
-    border-radius:10px;
-    width: 100%;
-    margin-top:10px;
-}
-
 .bilde2 {
     grid-area: bilde2;
+    background-color: black;
+    border-radius:10px;
 }
+
+#video {
+    height: 100%;
+    max-width: 100%;
+}
+
 
 .tekst2 {
     grid-area: tekst2;
@@ -170,19 +193,92 @@ iframe {
     color:black;
 }
 
+.nomarg {
+    margin-block-end: 0;
+}
+
+/*Fotoalbum*/
+
+.slider {
+    grid-area:slider;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "slidertekst slideralbum";
+    column-gap: 1vw;
+
+}
+
+.slidertekst {
+    grid-area:slidertekst;
+}
+
+.slideralbum {
+    grid-area:slideralbum;
+}
+
+.slides {
+    display:none;
+    width:100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*Kalkulator*/
+.kalkulator {
+    grid-area:kalkulator;
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "kalk bildeGreier";
+}
+
+.kalk {
+    grid-area:kalk;
+    
+}
+
+.bilderGreier {
+    max-width: 100%;
+}
+
+/*Knapper*/
+.prev, .next {
+    padding:10px;
+    user-select: none;
+    border-radius:10px;
+}
+
+.next{
+    justify-self: right;
+}
+
+
+
 
 /*Alt til dark theme*/
 .lysmodus {
+    background-color:rgba(128, 128, 128, 0);
     position: fixed;
     bottom:20px;
-    right:20px;
-    display: inline-block;
-    border: 5px ridge;
-    border-radius: 5px;
-    background-color: white;
-    padding:10px;
-    color:black;
+    left:20px;
+    padding:5px;
+    color:white;
     text-decoration: none;
+    display: inline-block;
+}
+
+.dark {
+    display:none;
+}
+
+.lysmodys:hover {
+    background-color:rgba(128, 128, 128, 0.356);
+    display: inline-block;
+    border: 5px double;
+    border-radius: 5px;
 }
 
 /*klokken*/
@@ -203,6 +299,29 @@ iframe {
 
 /*menyen*/
 
+#meny {
+    background-color: rgba(64,24,0,255);
+    position: fixed;
+    height: 100%;
+    top:0;
+    left:0;
+    width:12%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "dream youtube bilde2";
+
+}
+
+#meny.stor {
+    border-right:white double;
+    transition:0.3s;
+}
+
+#lang {
+    color:white;
+}
+
 #tilbake {
     position:fixed;
     left:20px;
@@ -218,28 +337,124 @@ iframe {
     top:27px;
 }
 
+.knappområde {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#zoominn {
+    display:block;
+    border:none;
+    padding:1px;
+}
+
+#zoomut {
+    display:block;
+    border:none;
+    padding:2px;
+}
+
+.hover {
+    background-color: rgba(202, 202, 202, 0);
+    border-radius:10px;
+}
+
+.hover:hover {
+    background-color: rgba(202, 202, 202, 0.589);
+    border:white;
+
+}
+
+.knapper {
+    width:3vw;
+    height:auto;
+    flex:1;
+}
+
 
 .footer {
     grid-area:footer;
-    justify-self: center;
+    justify-self:right;
+    width:88%;
+}
+
+.fotområde {
     width: 100%;
-    background-color: rgba(64,24,0,255);
+    height:100%;
+    border-top:white double;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "venstre midt";
     grid-gap:20px;
     color:white;
-
 }
 
 
 .venstre {
     grid-area:venstre;
-    margin:10px;
+    padding: 15px;
 }
 
 .midt {
     grid-area: midt;
-    margin:10px;
+    padding: 15px;
+}
+
+
+@media screen and (max-width: 700px) {
+
+    /*body {
+        grid-template-columns: 1fr 30fr 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr 0.3fr;
+    }
+*/
+    .main {
+        margin: 1%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "tekst1"
+                            "bilde1";
+    }
+
+    .dings {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "dream"
+                            "tekst2"
+                            "youtube"
+                            "tekst3"
+                            "bilde2"  
+                            "tekst4";
+    }
+
+
+    #header {
+        font-size: 4vw;
+    }
+
+    #tilbake {
+        top:5px;
+        left:5px;
+        font-size:medium;
+    }
+
+    #klokke {
+        right:5px;
+        top:5px;
+        font-size:medium;
+    }
+
+    #klokke.stor {
+        font-size:medium;
+        top:5px;
+    }
+
+    #tilbake.stor {
+        font-size:medium;
+        top:5px;
+    }
+
+    .bilder {max-width:70%;}
 }
