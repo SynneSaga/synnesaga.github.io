@@ -52,16 +52,16 @@
         </div>
     </div>
     <!--Nedre boks med fotoalbum-->
-    <div class="slider bakfar">
+    <div class="slider bakfar endre">
         <div class="slidertekst">
             <p>Dette er et fotoalbum fra min tur over vidden.<br>Var ganske gøyt, men begynte å lyne halvveis over.<br>Jaja</p>
-            <input type="text" id="fornavnInput" value="Fornavn"></input>
-            <input type="text" id="etternavnInput" value="Etternavn"></input>
-            <input type="text" id="domeneInput" value="Domene"></input>
+            <input type="text" id="fornavnInput" value="Fornavn" onfocus="this.value=''"></input>
+            <input type="text" id="etternavnInput" value="Etternavn" onfocus="this.value=''"></input>
+            <input type="text" id="domeneInput" value="Domene" onfocus="this.value=''"></input>
             <button onclick="lagEmail()">Knapp</button>
             <p id ="mailOutput">Her kommer den nye mailadressen din.</p>
-            <input type="text" id="stedsnavnEn" value="Sted 1"></input>
-            <input type="text" id="stedsnavnTo" value="Sted 2"></input>
+            <input type="text" id="stedsnavnEn" value="Sted 1" onfocus="this.value=''"></input>
+            <input type="text" id="stedsnavnTo" value="Sted 2" onfocus="this.value=''"></input>
             <button onclick="finnDiff()">Knapp2</button>
             <p id="diffUtskrift">Mengden bokstaver forskjell: </p>
             <ul id="utskriftHvert">
@@ -76,10 +76,10 @@
                 <img src="Bilder/vaporwave.jpg">
             </div>
             <div class="slides">
-                <img src="Bilder/tt.png">
+                <img src="Bilder/zoominn.png">
             </div>
             <div class="slides">
-                <img src="Bilder/tt.png">
+                <img src="Bilder/zoomut.png">
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -89,9 +89,9 @@
     <div class="kalkulator bakfar">
         <div class="kalk">
             <p>Her er en kalkulator.<br>Du kan skrive inn et tall, hvilken regneoperasjon (+, -, *, /) og et annet tall.</p>
-            <input type="text" id="kalkTallEn" value="Tall">
-            <input type="text" id="kalkOperasjon" value="+,-,*,/">
-            <input type="text" id="kalkTallTo" value="Tall">
+            <input type="text" id="kalkTallEn" value="Tall" onfocus="this.value=''">
+            <input type="text" id="kalkOperasjon" value="+,-,*,/" onfocus="this.value=''">
+            <input type="text" id="kalkTallTo" value="Tall" onfocus="this.value=''">
             <button onclick="kalkuler()">Regn ut</button>
             <p id="svaret"></p>
             <p>Lage en søkeboks!</p>
@@ -99,10 +99,24 @@
             <div id="searchValue"></div>
         </div>
         <div class="bildeGreier">
-            <img src="#" id="randBilde">
-            <img src="Bilder/synnesvarthvitt.png" id="bildeVis">
+            <img src="#" id="randBilde" style="height:100px;">
+            <img src="Bilder/synnesvarthvitt.png" id="bildeVis" style="height:100px;">
             <button id="endreBilde">Neste</button>
+        </div>
+    </div>
 
+    <div class="spill bakfar">
+        <div class="gjettespill">
+            <p>Gjett et tall mellom 0-10</p>
+            <input id="gjetteInput" type="text" value="Tall" onfocus="this.value=''">
+            <button onclick="gjetteSpill()">Gjett tall!</button>
+            <p id="gjetteOutput"></p>
+        </div>
+        <div class="annetspill">
+            <p>Hvilket motorisert kjøretøy kan du kjøre? Skriv inn alderen din her:</p>
+            <input type="text" id="kjoreAlder" value="Alder" onfocus="this.value=''">
+            <button onclick="kjoreKort()">og trykk her for svar.</button>
+            <p id="kjoreOutput">And the verdict is...</p>
         </div>
     </div>
 

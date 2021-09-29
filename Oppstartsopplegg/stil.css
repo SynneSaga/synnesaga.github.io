@@ -6,7 +6,8 @@ body {
                         ". main ."  
                         ". dings ."
                         ". slider ."
-                        ". kalkulator ."          
+                        ". kalkulator ."
+                        ". spill ."   
                         "footer footer footer";
     background-color: rgb(202, 202, 202);
     margin: 0;
@@ -220,6 +221,7 @@ iframe {
 .slides {
     display:none;
     width:100%;
+    height:300px;
 }
 
 img {
@@ -255,7 +257,20 @@ img {
     justify-self: right;
 }
 
+.spill {
+    grid-area:spill;
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "gjettespill annetspill";
+}
 
+.gjettespill {
+    grid-area:gjettespill;
+}
+
+.annetspill {
+    grid-area:annetspill;
+}
 
 
 /*Alt til dark theme*/

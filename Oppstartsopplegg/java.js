@@ -16,14 +16,27 @@ window.onscroll = function() {scrollFunction()};
 function farger(){
     const btn = document.querySelector(".lysmodus");
     const theme = document.querySelector("#tema-link");
+    var dings = document.getElementsByClassName("endre bakfar");
      
-    btn.addEventListener("click", function() {
+    /*btn.addEventListener("click", function() {
       if (theme.getAttribute("href") == "stil.css") {
         theme.href = "dark-stil.css";
       } else {
         theme.href = "stil.css";
       }
-  });
+  });*/
+
+  btn.addEventListener("click", function() {
+    while (dings[0]){
+    if (theme.getAttribute("href") == "stil.css") {
+      dings[0].classList.remove("bakfar");
+      dings[0].classList.add("mork");
+      console.log("tester")
+    } else {
+      theme.href = "stil.css";
+    }
+  }
+});
 }
 
 function startTime() {
@@ -331,6 +344,9 @@ window.onkeyup = keyup;
 
 function fjernTekst() {
   document.getElementById("søkeboks").value = "Search here";
+  document.getElementById("kalkTallEn").value = "Tall";
+  document.getElementById("kalkOperasjon").value = "+,-,*,/";
+  document.getElementById("kalkTallTo").value = "Tall";
 }
 //creates a global Javascript variable
 var inputTextValue;
@@ -346,7 +362,7 @@ function keyup(e) {
     if (document.getElementById("søkeboks").value.length == 0) {
       console.log("Empty")
     }
-    else {
+    else if (document.getElementById("søkeboks") === document.activeElement) {
       window.location = "sider/search.html";//"http://synnesaga.github.io/sider/search.html"; + inputTextValue;
       var ting = document.getElementById("søkeboks");
       console.log(ting);
@@ -358,4 +374,74 @@ function keyup(e) {
 //input har id="searchtxt", div har id searchvalue or not ig
 
 
+
+//Gjettespill - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+function gjetteSpill() {
+var gjetteTall = Math.floor(Math.random() * 11);
+var tallGjettet = document.getElementById("gjetteInput").value;
+/*console.log(gjetteTall);
+console.log(tallGjettet);*/
+if ((tallGjettet < 0) || (tallGjettet > 10)) {
+  document.getElementById("gjetteOutput").innerHTML = ("Feil, les oppgaven nøye");
+  console.log("Feil, les oppgaven nøye");
+}
+
+else if (tallGjettet == gjetteTall) {
+  document.getElementById("gjetteOutput").innerHTML = "Riktig!";
+  console.log("Riktig"); 
+}
+else {
+  document.getElementById("gjetteOutput").innerHTML = ("Nei, riktig tall er " + gjetteTall);
+}
+
+}
+
+
+
+//Førerkort shenanigans
+function kjoreKort() {
+  let kjoreAlder = document.getElementById("kjoreAlder").value;
+  if (kjoreAlder < 16){
+    document.getElementById("kjoreOutput").innerHTML = "Sykkel og sparkehjul for deg."
+  }
+  else if (kjoreAlder < 18){
+    document.getElementById("kjoreOutput").innerHTML = "Moped"
+  }
+  else if (kjoreAlder < 21){
+    document.getElementById("kjoreOutput").innerHTML = "Moped & bil!"
+  }
+  else if (kjoreAlder < 24){
+    document.getElementById("kjoreOutput").innerHTML = "Moped, bil & lastebil"
+  }
+  else if (kjoreAlder < 75){
+    document.getElementById("kjoreOutput").innerHTML = "Moped, bil, lastebil & buss"
+  }
+  else if (kjoreAlder < 80){
+    document.getElementById("kjoreOutput").innerHTML = "Husk å fornye førerkortet"
+  }
+  else if (kjoreAlder >= 80){
+    document.getElementById("kjoreOutput").innerHTML = "Husk helseattest"
+  }
+}
+
+//Switchtest
+
+/*function kjoreKortTo() {
+  //console.log("haha")
+  var kjoreAlder = document.getElementById("kjoreAlder");
+  var kjoreOutput = document.getElementById("kjoreOutput");
+  switch(parseInt(kjoreAlder)) {
+    case 0:
+      kjoreOutput.innerHTML = "Impossible...";
+      console.log("gahh")
+      break;
+
+    
+
+    default:
+    console.log(`yeet`);
+  }
+}
+*/
 
