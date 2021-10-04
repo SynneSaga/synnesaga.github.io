@@ -1,23 +1,41 @@
-window.onscroll = function() {scrollFunction()};
-  function scrollFunction() {
-    if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
-       document.getElementById("header").className = "stor";
-       document.getElementById("klokke").className = "stor";
-       document.getElementById("tilbake").className = "stor";
-       document.getElementById("meny").className = "stor";
-    } else {
-      document.getElementById("header").className = "";
-      document.getElementById("klokke").className = "";
-      document.getElementById("tilbake").className = "";
-      document.getElementById("meny").className = "";
-    }
-  }
+document.addEventListener("DOMContentLoaded", function(event) {
+  document.documentElement.setAttribute("data-theme", "dark");
+});
 
-function farger(){
+var btn = document.querySelector(".lysmodus");
+btn.onclick = function() {
+  var currentTheme = document.documentElement.getAttribute("data-theme");
+  var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+  document.documentElement.setAttribute("data-theme", switchToTheme);
+  if (currentTheme === "light") {
+    document.getElementById("bilder").src = "Bilder/synnesvarthvitt.png";
+  }
+  else {
+    document.getElementById("bilder").src = "Bilder/synnebilde.png";
+  }
+}
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
+      document.getElementById("header").className = "stor";
+      document.getElementById("klokke").className = "stor";
+      document.getElementById("tilbake").className = "stor";
+      document.getElementById("meny").className = "stor";
+  } else {
+    document.getElementById("header").className = "";
+    document.getElementById("klokke").className = "";
+    document.getElementById("tilbake").className = "";
+    document.getElementById("meny").className = "";
+  }
+}
+
+
+/*function farger(){
+  farger(); i onload=""
     const btn = document.querySelector(".lysmodus");
-    const theme = document.querySelector("#tema-link");
-    var dings = document.getElementsByClassName("endre bakfar");
-     
+    //const theme = document.querySelector("#tema-link");
+    const dings = document.getElementsByClassName("bakfar");
     /*btn.addEventListener("click", function() {
       if (theme.getAttribute("href") == "stil.css") {
         theme.href = "dark-stil.css";
@@ -25,20 +43,22 @@ function farger(){
         theme.href = "stil.css";
       }
   });*/
+  /*btn.addEventListener("click", function() {
+    //while (dings[0]){
+      //dings[0].classList.remove("bakfar");
+      dings[0].classList.toggle("bakfar");
+      dings[1].classList.toggle("bakfar");
+      dings[2].classList.toggle("bakfar");
+      dings[3].classList.toggle("bakfar");
 
-  btn.addEventListener("click", function() {
-    while (dings[0]){
-    if (theme.getAttribute("href") == "stil.css") {
-      dings[0].classList.remove("bakfar");
-      dings[0].classList.add("mork");
       console.log("tester")
-    } else {
-      theme.href = "stil.css";
-    }
-  }
+      console.log(dings)
+    //}
+  
+
 });
 }
-
+*/
 function startTime() {
     const today = new Date();
     let h = today.getHours();
@@ -51,7 +71,6 @@ function startTime() {
     document.getElementById("klokke").innerText = h + ":" + m + ":" + s;
     setTimeout(startTime, 1000);
 }
-
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  
   return i;
@@ -72,7 +91,6 @@ function zinn() {
   //bilde.style.width = "350px"; er i stilark
   bilde.width = bilde.width + 50;
 }
-
 
 let zoomut = document.getElementById("zoomutknapp");
 zoomut.addEventListener("click", zut);
@@ -100,7 +118,6 @@ else if (navigator.language == "en-US") {
   document.getElementById("språk").innerHTML = ("Amerikanere...");
   //document.getElementById("#").className = "#";
 }
-
 else if (navigator.language == "en-GB") {
   console.log("ingles but better");
   document.getElementById("språk").innerHTML = ("It's chewsday, innit?");
@@ -111,7 +128,6 @@ else if (navigator.language == "en-GB") {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-
 var namn = prompt("What's your name, kiddo?");
 console.log("Hei, " + namn);
 if (namn == "") {

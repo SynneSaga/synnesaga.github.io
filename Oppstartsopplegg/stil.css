@@ -1,3 +1,21 @@
+[data-theme="dark"] {
+    --bakfar: gray;
+    --tekstfarge: rgb(212, 212, 212);
+    --bodyfarge:rgb(61, 58, 58);
+    --headerfarge:black;
+    --headertekst: lightgray;
+
+}
+
+[data-theme="light"] {
+    --bakfar: rgb(233, 233, 233);
+    --tekstfarge: black;
+    --bodyfarge: rgb(202, 202, 202);
+    --headerfarge: rgba(64,24,0,255);
+    --headertekst: white;
+}
+
+
 body {
     display: grid;
     grid-template-columns: 6.5fr 30fr 2fr;
@@ -9,23 +27,23 @@ body {
                         ". kalkulator ."
                         ". spill ."   
                         "footer footer footer";
-    background-color: rgb(202, 202, 202);
+    background-color: var(--bodyfarge);
     margin: 0;
     font-family: 'Pixel UniCode';
     row-gap: 30px;
-    line-height:2vw;
+    line-height: 2vw;
 }
 
 #header {
+    background-color: var(--headerfarge);
+    color: var(--headertekst);
     grid-area: header;
     width: 100%;
-    color:white;
     max-height: 13vw;
     position: fixed;
     font-size: 4.5vw;
     transition: 0.3s;
     line-height: normal;
-    background-color: rgba(64,24,0,255);
 }
 
 header {
@@ -42,18 +60,22 @@ header {
     border:white double;
     border-top:0;
 }
-
 /*Skal endres i dark mode*/
-.bakfar {
-    background-color: rgba(250,248,249,255);
+
+
+.mork {
+    background-color: var(--bakfar);/*rgba(250,248,249,255);*/
+    color: var(--tekstfarge);
     border-radius: 15px;
     padding:2vw;
     justify-self: center;
     width: 100%;
 }
 
+
 .roedt {
-    background-color: rgba(64,24,0,255);
+    background-color: var(--headerfarge);
+    color: var(--headertekst);
 }
 
 
@@ -61,12 +83,11 @@ header {
     grid-area: main;
     margin-top: 120px;
     display: grid;
-
     grid-template-columns: auto auto;
-
     grid-template-rows: 1fr;
     grid-template-areas: "tekst1 bilde1";
 }
+
 
 .tekst1 {
     grid-area: tekst1;
@@ -120,7 +141,7 @@ iframe {
 
 /*Ting som dras*/
 ::-webkit-scrollbar-thumb {
-    background:rgba(64,24,0,255);
+    background-color: var(--headerfarge);
     /*border-radius: 10px;*/
 }
 
@@ -181,17 +202,14 @@ iframe {
 
 .tekst2 {
     grid-area: tekst2;
-    color:black;
 }
 
 .tekst3 {
     grid-area: tekst3;
-    color:black;
 }
 
 .tekst4 {
     grid-area: tekst4;
-    color:black;
 }
 
 .nomarg {
@@ -315,7 +333,7 @@ img {
 /*menyen*/
 
 #meny {
-    background-color: rgba(64,24,0,255);
+    background-color: var(--headerfarge);
     position: fixed;
     height: 100%;
     top:0;
@@ -420,17 +438,18 @@ img {
 
 @media screen and (max-width: 700px) {
 
-    /*body {
-        grid-template-columns: 1fr 30fr 1fr;
-        grid-template-rows: 0.1fr 1fr 1fr 0.3fr;
+    body {
+        /*grid-template-columns: 1fr 30fr 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr 0.3fr;*/        line-height:4vw;
     }
-*/
+
     .main {
         margin: 1%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
         grid-template-areas: "tekst1"
                             "bilde1";
+                            
     }
 
     .dings {
