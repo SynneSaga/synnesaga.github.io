@@ -441,6 +441,97 @@ function kjoreKort() {
   }
 }
 
+
+//Definisjonen av getRandomIntInclusive, er viktig å ha med. 
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+function fargeVelger() {
+  var tallR = getRandomIntInclusive(0,255);
+  var tallG = getRandomIntInclusive(0,255);
+  var tallB = getRandomIntInclusive(0,255);
+  if ( ((tallR >= 150) && (tallG >= 150)) || ((tallG >= 150) && (tallB >= 150)) || ((tallR >= 150) && (tallB >= 150))) {
+    document.getElementById("fargeUtskrift").style.color = "black";
+  }
+
+  else if ((tallR >= 200)||(tallG >= 200)){
+    document.getElementById("fargeUtskrift").style.color = "black";
+  }
+
+  else {
+    document.getElementById("fargeUtskrift").style.color = "rgb(212, 212, 212)";
+  }
+  var tallString = "rgb(" + tallR + "," + tallG + "," + tallB + ")";
+  return tallString;
+}
+
+function fargeEndrer() {
+  var fargeEndret = fargeVelger();
+  document.getElementById("fargeUtskrift").style.backgroundColor = fargeEndret;
+  console.log("trykk");
+  console.log(fargeEndret);
+}
+
+
+
+
+function playSound(url) {
+  const audio = new Audio(url);
+  audio.play();
+}
+
+function kaosKnapp() {
+  /*document.getElementById("header").style.backgroundColor = fargeVelger();
+  document.getElementById("meny").style.backgroundColor = fargeVelger();
+  document.getElementById("fotområde").style.backgroundColor = fargeVelger();
+  let s = today.getSeconds();
+  s = checkTime(s);
+  setTimeout(kaosKnapp, 1000);*/
+
+  let lydArray = ["vineboom", "Bababooey"]; //Husk "" for hvert bilde
+//document.getElementById("bildeVis").src = "bilder/tt.png"; for test
+  let verdi = Math.floor(Math.random() * 2); //randome tall fra 0 til 2
+  let lyd = "Bilder/" + lydArray[verdi] + ".mp3";
+  const audio = new Audio(lyd);
+  audio.play();
+  var r = document.querySelector(':root');
+  r.style.setProperty('--headerfarge', fargeVelger());
+  r.style.setProperty('--bodyfarge', fargeVelger());
+  r.style.setProperty('--bakfar', fargeVelger());
+  r.style.setProperty('--tekstfarge', fargeVelger());
+  r.style.setProperty('--headertekst', fargeVelger());
+
+  
+}
+
+(function loop() {
+  var rand = Math.round(Math.random() * (3000 - 500)) + 500;
+  setTimeout(function() {
+          kaosKnapp();
+          loop();  
+  }, rand);
+
+}());
+
+/*avknapp*/
+
+
+/*function kaosKnapp() {
+  let i=0;
+  let s = today.getSeconds();
+  s = checkTime(s);
+  setTimeout(startTime, 1000);
+while (i<1000) {
+  Kaos();
+  i++;
+}
+
+}
+
 //Switchtest
 
 /*function kjoreKortTo() {
