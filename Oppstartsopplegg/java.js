@@ -539,13 +539,28 @@ while (i<1000) {
 
 
 document.getElementById("kryptKnapp").addEventListener("click", function() {
+  const kryptBokstav = document.getElementById("kryptStrInput").value;
   const kryptTall = document.getElementById("kryptIntInput").value;
-  var kryptBokstav = document.getElementById(parseInt("kryptStrInput"));
-  console.log(kryptTall);
   var bArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',"æ","ø","å"];
-  let plass = bArray.indexOf(kryptTall);
-  console.log(plass);
+  //let plass = bArray.indexOf(kryptBokstav); 
+  var nyttArray = Array.from(kryptBokstav);
+
+  /*var sorter = bArray.filter(element => nyttArray.includes(element)); //Nytt array med samme verdier som nyttArray
+
+  let Nyplass = bArray.indexOf(kryptBokstav);
+  console.log(Nyplass)*/
+
+  //var nyBokstav = Math.abs(parseInt(kryptTall) + parseInt(plass))
+  //console.log(nyBokstav);
+  //console.log(bArray[nyBokstav]);
   
+  
+  for (let i = 0; i < nyttArray.length; i++) {
+    var tall = (bArray.indexOf(nyttArray[i]) + parseInt(kryptTall));
+    //console.log(tall);
+    console.log(bArray[tall]);
+  }
+
 })
 
 
