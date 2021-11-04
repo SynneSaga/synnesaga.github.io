@@ -19,13 +19,14 @@
 body {
     display: grid;
     grid-template-columns: 6.5fr 30fr 2fr;
-    grid-template-rows: 0.1fr auto auto auto auto;
+    grid-template-rows: 0.1fr auto auto auto auto auto;
     grid-template-areas: "header header header"
                         ". main ."  
                         ". dings ."
                         ". slider ."
                         ". kalkulator ."
                         ". spill ."   
+                        " . kryptering . "
                         "footer footer footer";
     background-color: var(--bodyfarge);
     margin: 0;
@@ -309,6 +310,13 @@ img {
     background-color: red;
     max-width:10vw;
     transition:0.3s;
+}
+
+.kryptering {
+    grid-area:kryptering;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-areas: "kryptInn";
 }
 
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oppgave 2</title>
+        <link rel="stylesheet" href="stil.css">
+    </head>
+    <body>
+        <header>Shuffle spilleliste!</header>
+        <ul id="utskriftSanger">
+            Now playing...
+        </ul>
+        <button id="btn">Shuffle playlist</button>
+        <div>
+            <button id="spillAv">Spill av</button>
+            <p id="sangSomSpiller"></p>
+            <div class="meter">
+                <span id="myBar" style="width: 0%"></span>
+            </div>
+            <button id="videoKnapp">Musikkvideo</button>
+            <video controls id="myVideo">
+              </video>
+        </div>
+
+        <div class="kryptTest">
+            <input type="text" id="inp" name="inp" maxlength="8" size="10">
+            <button id="krypt">Kjør</button>
+        </div>
+        <script  type="text/javascript" src="java.js"></script>
+    </body>
+</html>

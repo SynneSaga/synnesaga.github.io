@@ -168,7 +168,7 @@ for (let hvertElement of arrayNamn) {
   //document.getElementById("utskriftHvert").innerHTML = "<li>" + hvertElement + "</li>"; siden det er kun = vil den da skrive over første navnet og andre navnet, og du vil kun få SynneSaga.
   document.getElementById("utskriftHvert").innerHTML += "<li>" + hvertElement + "</li>"; //Denne virker hvis du lager en div med id="utskrift" og tar document.getElementById("utskrift").innerHTML = arrayNamn;
   //document.getElementById("utskriftHvert").innerHTML = document.getElementById("utskriftHvert").innerHTML + "<li>" + hvertElement + "</li>"; Denne virker også, men er knotete.
-  console.log(hvertElement);
+  console.log();
 }
 
 //Disse to løkkene gjør akkuratt det samme^^vv
@@ -484,17 +484,17 @@ function playSound(url) {
   audio.play();
 }
 
-function kaosKnapp() {
-  /*document.getElementById("header").style.backgroundColor = fargeVelger();
-  document.getElementById("meny").style.backgroundColor = fargeVelger();
-  document.getElementById("fotområde").style.backgroundColor = fargeVelger();
-  let s = today.getSeconds();
-  s = checkTime(s);
-  setTimeout(kaosKnapp, 1000);*/
+/*function kaosKnapp() {
+  //document.getElementById("header").style.backgroundColor = fargeVelger();
+  //document.getElementById("meny").style.backgroundColor = fargeVelger();
+  //document.getElementById("fotområde").style.backgroundColor = fargeVelger();
+  //let s = today.getSeconds();
+  //s = checkTime(s);
+  //setTimeout(kaosKnapp, 1000);
 
-  let lydArray = ["vineboom", "Bababooey"]; //Husk "" for hvert bilde
+  let lydArray = ["vineboom", "Bababooey", "whatthe"]; //Husk "" for hvert bilde
 //document.getElementById("bildeVis").src = "bilder/tt.png"; for test
-  let verdi = Math.floor(Math.random() * 2); //randome tall fra 0 til 2
+  let verdi = Math.floor(Math.random() * 3); //randome tall fra 0 til 2
   let lyd = "Bilder/" + lydArray[verdi] + ".mp3";
   const audio = new Audio(lyd);
   audio.play();
@@ -506,16 +506,21 @@ function kaosKnapp() {
   r.style.setProperty('--headertekst', fargeVelger());
 
   
-}
+}*/
 
-(function loop() {
+/*(function loop() {
   var rand = Math.round(Math.random() * (3000 - 500)) + 500;
-  setTimeout(function() {
-          kaosKnapp();
-          loop();  
+  document.getElementById('kaosAv').addEventListener("click",  function() {
+    rand = 0;
+    console.log("ahdfk")
+  }
+  ) 
+    setTimeout(function() {
+      kaosKnapp();
+      loop(); 
   }, rand);
+}());*/
 
-}());
 
 /*avknapp*/
 
@@ -530,7 +535,25 @@ while (i<1000) {
   i++;
 }
 
-}
+}*/
+
+
+document.getElementById("kryptKnapp").addEventListener("click", function() {
+  const kryptTall = document.getElementById("kryptIntInput").value;
+  var kryptBokstav = document.getElementById(parseInt("kryptStrInput"));
+  console.log(kryptTall);
+  var bArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',"æ","ø","å"];
+  let plass = bArray.indexOf(kryptTall);
+  console.log(plass);
+  
+})
+
+
+
+
+
+
+
 
 //Switchtest
 
