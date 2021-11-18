@@ -445,6 +445,92 @@ function kjoreKort() {
 }
 
 
+
+
+function fargeVelger() {
+  var tallR = getRandomIntInclusive(0,255);
+  var tallG = getRandomIntInclusive(0,255);
+  var tallB = getRandomIntInclusive(0,255);
+  if ( ((tallR >= 150) && (tallG >= 150)) || ((tallG >= 150) && (tallB >= 150)) || ((tallR >= 150) && (tallB >= 150))) {
+    document.getElementById("fargeUtskrift").style.color = "black";
+  }
+
+  else if ((tallR >= 200)||(tallG >= 200)){
+    document.getElementById("fargeUtskrift").style.color = "black";
+  }
+
+  else {
+    document.getElementById("fargeUtskrift").style.color = "rgb(212, 212, 212)";
+  }
+  var tallString = "rgb(" + tallR + "," + tallG + "," + tallB + ")";
+  return tallString;
+}
+
+function fargeEndrer() {
+  var fargeEndret = fargeVelger();
+  document.getElementById("fargeUtskrift").style.backgroundColor = fargeEndret;
+  console.log("trykk");
+  console.log(fargeEndret);
+}
+
+
+
+
+function playSound(url) {
+  const audio = new Audio(url);
+  audio.play();
+}
+
+/*function kaosKnapp() {
+  //document.getElementById("header").style.backgroundColor = fargeVelger();
+  //document.getElementById("meny").style.backgroundColor = fargeVelger();
+  //document.getElementById("fotområde").style.backgroundColor = fargeVelger();
+  //let s = today.getSeconds();
+  //s = checkTime(s);
+  //setTimeout(kaosKnapp, 1000);
+  let lydArray = ["vineboom", "Bababooey", "whatthe"]; //Husk "" for hvert bilde
+//document.getElementById("bildeVis").src = "bilder/tt.png"; for test
+  let verdi = Math.floor(Math.random() * 3); //randome tall fra 0 til 2
+  let lyd = "Bilder/" + lydArray[verdi] + ".mp3";
+  const audio = new Audio(lyd);
+  audio.play();
+  var r = document.querySelector(':root');
+  r.style.setProperty('--headerfarge', fargeVelger());
+  r.style.setProperty('--bodyfarge', fargeVelger());
+  r.style.setProperty('--bakfar', fargeVelger());
+  r.style.setProperty('--tekstfarge', fargeVelger());
+  r.style.setProperty('--headertekst', fargeVelger());
+  
+}*/
+
+/*(function loop() {
+  var rand = Math.round(Math.random() * (3000 - 500)) + 500;
+  document.getElementById('kaosAv').addEventListener("click",  function() {
+    rand = 0;
+    console.log("ahdfk")
+  }
+  ) 
+    setTimeout(function() {
+      kaosKnapp();
+      loop(); 
+  }, rand);
+}());*/
+
+
+/*avknapp*/
+
+
+/*function kaosKnapp() {
+  let i=0;
+  let s = today.getSeconds();
+  s = checkTime(s);
+  setTimeout(startTime, 1000);
+while (i<1000) {
+  Kaos();
+  i++;
+}
+}*/
+
 //Terningspill
 
 function terninger() {
@@ -465,3 +551,38 @@ function terninger() {
 
 
 
+
+document.getElementById("kryptKnapp").addEventListener("click", function() {
+  const kryptBokstav = document.getElementById("kryptStrInput").value;
+  const kryptTall = document.getElementById("kryptIntInput").value;
+  var bArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',"æ","ø","å"];
+  //let plass = bArray.indexOf(kryptBokstav); 
+  var nyttArray = Array.from(kryptBokstav.toLowerCase());
+
+  /*var sorter = bArray.filter(element => nyttArray.includes(element)); //Nytt array med samme verdier som nyttArray
+  let Nyplass = bArray.indexOf(kryptBokstav);
+  console.log(Nyplass)*/
+
+  //console.log(nyBokstav);
+  //console.log(bArray[nyBokstav]);
+  
+  let kryptOut = document.getElementById("kryptOutput");
+  kryptOut.innerHTML = "";
+    for (let i = 0; i < nyttArray.length; i++) {
+      var tall = (bArray.indexOf(nyttArray[i]) + parseInt(kryptTall));
+      if (tall >= bArray.length) {
+        tall = parseInt(tall) - bArray.length;
+        let helKrypt = bArray[tall] ;
+        kryptOut.innerHTML += helKrypt;
+      }
+      else {
+        let helKrypt = bArray[tall] ;
+        kryptOut.innerHTML += helKrypt;
+      }
+    
+    //document.getElementById("kryptOutput").innerHTML = helKrypt;
+
+    //var gammeltTall = (parseInt(tall) - parseInt(kryptTall)); Reversere kryptering
+    //console.log("Gammel bokstav: " + bArray[gammeltTall])
+  }
+})
