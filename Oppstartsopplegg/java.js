@@ -119,7 +119,7 @@ else if (navigator.language == "en-US") {
   //document.getElementById("#").className = "#";
 }
 else if (navigator.language == "en-GB") {
-  console.log("ingles but better");
+  //console.log("ingles but better");
   document.getElementById("språk").innerHTML = ("It's chewsday, innit?");
   //document.getElementById("#").className = "#";
 }
@@ -129,7 +129,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 var namn = prompt("What's your name, kiddo?");
-console.log("Hei, " + namn);
+//console.log("Hei, " + namn);
 if (namn == "") {
   document.getElementById("navnet").innerHTML = ("Velko- nei vel :/")
 }
@@ -140,19 +140,20 @@ else {document.getElementById("navnet").innerHTML = ("Velkommen, " + namn + "!")
 //var tid = h + ":" + m + ":" + s;
 
 //parseInt og parseFloat - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-console.log("Ting er: " + namn);
+/*console.log("Ting er: " + namn);
 console.log(`Ting er: ${namn}`);
 console.log(parseInt("1111",2)); //Binært system
 console.log(parseFloat("0.1"));
 
 console.log(parseInt("40 kr")); //Vil se vekk ifra kr siden ikke tall.
 console.log(Number("40 kr")); //Vil logge NaN, not a number, pga kr delen.
+*/
 
 //Boolean, True eller False - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 let amTired = true;
 if (amTired) { //kan være amTired == true, betyr samme greiene
   namn = "Saga";
-  console.log("Jeg også");
+  //console.log("Jeg også");
 }
 else {
   namn = namn; //egt unødvendig
@@ -160,7 +161,7 @@ else {
 
 //Tabeller og arrays - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 let arrayNamn = ["Saga", "Synne","SynneSaga"];
-console.log(arrayNamn);
+//console.log(arrayNamn);
 
 //Løkker - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -173,7 +174,7 @@ for (let hvertElement of arrayNamn) {
 
 //Disse to løkkene gjør akkuratt det samme^^vv
 for (let i = 0; i < arrayNamn.length; i++) {
-  console.log(arrayNamn[i]);
+  //console.log(arrayNamn[i]);
 }
 
 //Likhetstegn
@@ -185,16 +186,16 @@ for (let i = 0; i < arrayNamn.length; i++) {
 //<li>
 
 
-
+/*
 let question = "Hva er dette?";
 for (let bokstav of question) {
-  console.log(bokstav);
+  //console.log(bokstav);
 
   if(bokstav == "?") {
-    console.log("Spørsmål!");
+    //console.log("Spørsmål!");
   }
   else {
-    console.log("bokstav");
+    //console.log("bokstav");
   }
 }
 
@@ -205,7 +206,7 @@ let desi = 6.9191
 console.log(Math.round(desi)); //runder av vanlig, får 7
 console.log(Math.floor(desi)); //runder ned, får 6
 console.log(Math.ceil(desi));  //runder opp, får 7
-
+*/
 //Lagre objekt
 let variabelNavn = {
     navn: "Saga",
@@ -214,7 +215,7 @@ let variabelNavn = {
     alder: 39
 };
 
-console.log(variabelNavn.yrke);
+//console.log(variabelNavn.yrke);
 
 
 
@@ -266,7 +267,7 @@ function lagEmail() {
   
   document.getElementById("mailOutput").innerHTML = helMail;
   document.getElementById("mailOutput").innerText = helMail;
-  console.log(helMail);
+  //console.log(helMail);
   }
 }
 
@@ -277,8 +278,8 @@ var gate = 'Kongens gate ';
 var husnr = 432;
 var oppgang = " b";
 var adresse = gate + husnr + oppgang;
-console.log("Adressen er " + adresse);
-console.log("Gaten er " + gate + ", husnummeret er " + husnr + ", oppgang " + oppgang);
+//console.log("Adressen er " + adresse);
+//console.log("Gaten er " + gate + ", husnummeret er " + husnr + ", oppgang " + oppgang);
 //print(adresse);
 
 //3.8.1
@@ -291,7 +292,7 @@ function finnDiff() {
   let lengdeStedTo = stedsnavnTo.length;
   
   let diffStedsnavn = Math.abs(lengdeStedEn-lengdeStedTo); 
-  console.log(diffStedsnavn);
+  //console.log(diffStedsnavn);
   document.getElementById("diffUtskrift").innerHTML = ("Mengden bokstaver forskjell: " + diffStedsnavn);
 }
 
@@ -543,23 +544,48 @@ document.getElementById("kryptKnapp").addEventListener("click", function() {
   const kryptTall = document.getElementById("kryptIntInput").value;
   var bArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',"æ","ø","å"];
   //let plass = bArray.indexOf(kryptBokstav); 
-  var nyttArray = Array.from(kryptBokstav);
+  var nyttArray = Array.from(kryptBokstav.toLowerCase());
 
   /*var sorter = bArray.filter(element => nyttArray.includes(element)); //Nytt array med samme verdier som nyttArray
 
   let Nyplass = bArray.indexOf(kryptBokstav);
   console.log(Nyplass)*/
 
-  //var nyBokstav = Math.abs(parseInt(kryptTall) + parseInt(plass))
   //console.log(nyBokstav);
   //console.log(bArray[nyBokstav]);
   
-  
-  for (let i = 0; i < nyttArray.length; i++) {
-    var tall = (bArray.indexOf(nyttArray[i]) + parseInt(kryptTall));
-    //console.log(tall);
-    console.log(bArray[tall]);
+  let kryptOut = document.getElementById("kryptOutput");
+  kryptOut.innerHTML = "";
+    for (let i = 0; i < nyttArray.length; i++) {
+      var tall = (bArray.indexOf(nyttArray[i]) + parseInt(kryptTall));
+      if (tall >= bArray.length) {
+        tall = parseInt(tall) - bArray.length;
+        let helKrypt = bArray[tall] ;
+        kryptOut.innerHTML += helKrypt;
+      }
+      else {
+        let helKrypt = bArray[tall] ;
+        kryptOut.innerHTML += helKrypt;
+      }
+    
+    //document.getElementById("kryptOutput").innerHTML = helKrypt;
+
+    //var gammeltTall = (parseInt(tall) - parseInt(kryptTall)); Reversere kryptering
+    //console.log("Gammel bokstav: " + bArray[gammeltTall])
   }
+
+
+
+
+
+/*var helKrypt = []; // create array to hold friend names
+
+for(var i=0; i < nyttArray.length; i++){    
+    helKrypt.push(nyttArray[i]); // add friend's name to the array
+}
+
+console.log(helKrypt); */
+
 
 })
 

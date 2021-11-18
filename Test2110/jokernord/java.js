@@ -42,3 +42,8 @@ pilNed.addEventListener("click", function(){
         document.querySelector("body").style.backgroundColor = "yellow";
     }
 });
+
+opp.addEventListener("click", function() {
+    var noe = document.getElementById("inn").value;
+    console.log(noe.toLowerCase())
+});
