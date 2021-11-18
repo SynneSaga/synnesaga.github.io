@@ -26,6 +26,7 @@ body {
                         ". slider ."
                         ". kalkulator ."
                         ". spill ."   
+                        ". terningchick ."
                         "footer footer footer";
     background-color: var(--bodyfarge);
     margin: 0;
@@ -93,8 +94,8 @@ header {
     grid-area: tekst1;
 }
 
-#navnet {
-    font-size: xx-large;
+p {
+    font-size: large;
 }
 
 .svart {
@@ -290,6 +291,34 @@ img {
     grid-area:annetspill;
 }
 
+/*Terning og kyllingspill*/
+
+.terningchick {
+    grid-area:terningchick;
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "terningspill kyllingspill";
+}
+
+.terningspill {
+    grid-area:terningspill;
+}
+
+.kyllingspill {
+    grid-area:kyllingspill;
+}
+
+
+
+
+
+
+
+
+
+
+/*Alt som ikke er direkte med i siden * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - * - */
 
 /*Alt til dark theme*/
 .lysmodus {
@@ -303,9 +332,6 @@ img {
     display: inline-block;
 }
 
-.dark {
-    display:none;
-}
 
 .lysmodys:hover {
     background-color:rgba(128, 128, 128, 0.356);

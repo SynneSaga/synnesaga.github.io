@@ -9,9 +9,11 @@ btn.onclick = function() {
   document.documentElement.setAttribute("data-theme", switchToTheme);
   if (currentTheme === "light") {
     document.getElementById("bilder").src = "Bilder/synnesvarthvitt.png";
+    document.getElementById("lysknapp").innerHTML = "Colours";
   }
   else {
     document.getElementById("bilder").src = "Bilder/synnebilde.png";
+    document.getElementById("lysknapp").innerHTML = "Dark mode";
   }
 }
 
@@ -441,23 +443,24 @@ function kjoreKort() {
   }
 }
 
-//Switchtest
 
-/*function kjoreKortTo() {
-  //console.log("haha")
-  var kjoreAlder = document.getElementById("kjoreAlder");
-  var kjoreOutput = document.getElementById("kjoreOutput");
-  switch(parseInt(kjoreAlder)) {
-    case 0:
-      kjoreOutput.innerHTML = "Impossible...";
-      console.log("gahh")
-      break;
+//Terningspill
 
-    
+function terninger() {
+  let verdiEn = Math.ceil(Math.random() * 6); //randome tall fra 1 til 6
+  let verdiTo = Math.ceil(Math.random() * 6); 
+  let verdiTre = Math.ceil(Math.random() * 6);
 
-    default:
-    console.log(`yeet`);
+  document.getElementById("terningBildeEn").src = "bilder/die" + verdiEn + ".png";
+  document.getElementById("terningBildeTo").src = "bilder/die" + verdiTo + ".png";
+  document.getElementById("terningBildeTre").src = "bilder/die" + verdiTre + ".png";
+
+  if ((verdiEn == verdiTo) && (verdiTo == verdiTre) && (verdiTre == verdiEn)) {
+    console.log("likt")
+    document.getElementById("terningOutput").innerHTML = "Alle tre er like!"
   }
 }
-*/
+
+
+
 

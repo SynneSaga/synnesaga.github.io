@@ -7,14 +7,14 @@
     <title>Repetisjon bcs korttidshukommelse</title>
     <link rel="icon" href="bilder/vaporwave.jpg">
 </head>
-<body onload="startTime(); nyeBilder(); fjernTekst()">
+<body onload="startTime(); nyeBilder(); fjernTekst(); terninger()">
     <div id="header">
         <header>Overskrift</header>
     </div>
     <!--Øverste boks m tekst og bilde-->
     <div class="main mork">
         <div class="tekst1">
-            <p style="font-size: large;" id="navnet">Underskrift</p>
+            <p style="font-size: large;">Underskrift</p>
             <p>Importance of uhh "rejecting pleasures to secure other greater pleasures, or else endure pains to avoid worse pains"</p>
             <p>"In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</p>
             <p>Ung var eg fordom, eg einsaman fór, vegvill då eg vart. Rik eg tottest når eg råka einkvar; mann er manns gaman. Mer tekst. According to all known laws of aviation, the bumblebee should not be able to fly el noe sånt. Mer tekst er greit å ha, kanskje enda mer? Hvem vet, ser sikkert bedre ut. Prøver ut auto, istedenfor fractions. Pls work.</p>
@@ -119,10 +119,21 @@
         </div>
     </div>
 
+    <div class="terningchick mork">
+        <div class="terningspill">
+            <p>Få tre like terninger</p>
+            <img src="#" id="terningBildeEn" style="height:100px;">
+            <img src="#" id="terningBildeTo" style="height:100px;">
+            <img src="#" id="terningBildeTre" style="height:100px;">
+            <button onclick="terninger()">Trill på nytt</button>
+            <p id="terningOutput"></p>
+        </div>
+
+    </div>
+
     <div id="meny"></div>
     <div id="klokke"></div>
-    <a href="#" class="lysmodus light">Dark mode</a>
-    <a href="#" class="lysmodus dark">Light mode</a>
+    <a href="#" class="lysmodus" id="lysknapp">Colours</a>
     <a href="/index.html" id="tilbake">Tilbake til start</a>
     <div class="footer">
         <div class="fotområde roedt">
