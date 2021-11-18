@@ -131,12 +131,31 @@
 
     </div>
 
+    <div class="fargeEndrer mork">
+        <div class="fargeTing">
+            <p id="fargeUtskrift">Hey</p>
+            <button onclick="fargeEndrer()">Trykk her!</button>
+        </div>
+        <div class="kaos">
+            <button onclick="kaosKnapp()">KAOS</button>
+            <button id="kaosAv">KAOS AV</button>
+        </div>
+    </div>
+
+    <div class="kryptering mork">
+        <div class="kryptInn">
+            <input type="text" id="kryptStrInput"value="Bokstav"onfocus="this.value=''">
+            <input type="text" id="kryptIntInput" value="Forskyves med?" onfocus="this.value=''">
+            <button id="kryptKnapp">Kjør</button>
+            <p id="kryptOutput" style="overflow:scroll;"></p>
+        </div>
+    </div>
     <div id="meny"></div>
     <div id="klokke"></div>
     <a href="#" class="lysmodus" id="lysknapp">Colours</a>
     <a href="/index.html" id="tilbake">Tilbake til start</a>
     <div class="footer">
-        <div class="fotområde roedt">
+        <div id="fotområde">
         <p class="venstre" id="språk"></p>
         <p class="midt" id="lang"></p>
         </div>

@@ -1,0 +1,52 @@
+body {
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.flexer {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#utskriftPriser {
+    background-color:white;
+    padding:5px 20px;
+    max-width: fit-content;
+    border-radius: 10px;
+    color:black;
+    flex:1;
+    margin: 0px 20px;
+    border: 3.5px solid black;
+}
+
+p {
+    padding:0px 20px; /*Topp/bunnpx siderpx*/
+    font-size: x-large;
+    font-weight: bold;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -2px 2px white;
+    flex:1;
+}
+
+
+td, th {
+    border: 1px solid gray;
+    color:white;
+}
+th {
+    background-color: white;
+    color:black;
+}
+
+table {
+    flex:1;
+    border: 3.5px solid black;
+    border-radius: 10px;
+    border-spacing: 0px;
+    max-width: fit-content;
+    margin: 0px 20px;
+}
