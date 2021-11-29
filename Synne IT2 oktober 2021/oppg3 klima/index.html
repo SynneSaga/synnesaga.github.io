@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stilark.css" id="tema-link">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <header style="font-weight: bold;">Hvor mye CO<sub>2</sub> slipper du ut?</header>
+        <form>
+            <!--Middager:-->
+            <p>Hvor ofte spiser du disse rettene til middag hver uke?</p>
+            <label for="kjøtt">Kjøtt</label>
+            <input type="number" name="kjøtt" id="kjøtt" min="0" max="7" value="0"><br>
+            <label for="fisk">Fisk</label>
+            <input type="number" name="fisk" id="fisk" min="0" max="7" value="0"><br>
+            <label for="vegetar">Vegetar</label>
+            <input type="number" name="vegetar" id="vegetar" min="0" max="7" value="0"><br>
+            <!--Reiser-->
+            <p>Hvor ofte flyr du til utlandet?</p>
+            <label for="flyturer">Flyturer</label>
+            <input type="number" name="flyturer" id="flyturer" min="0" max="52" value="0"><br>
+            
+        </form>
+        <button id="kalkKnapp">Kalkuler</button>
+        <p id="outputCO"></p>
+    </div>
+    <script type="text/javascript" src="java.js"></script>
+</body>
+</html>

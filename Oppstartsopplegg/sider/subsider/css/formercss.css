@@ -1,0 +1,47 @@
+
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div {
+    margin:20px;
+    border-radius: 10px;
+    background-color: darkgray;
+    
+}
+
+header {
+    font-size: larger;
+}
+
+input {
+    border:2px solid rgb(41, 41, 41);
+    border-radius:2px;
+}
+
+#inOut {
+    font-size: x-large;
+    font-weight: bold;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -2px 2px black;
+    overflow: inherit;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+#bilde {
+    width:220px;
+    height:300px;
+    resize:both;
+    overflow: hidden;
+   
+}
+
+#bildet {
+    
+    height:inherit;
+    border-radius: 10px;
+}

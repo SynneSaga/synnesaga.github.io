@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stilark.css" id="tema-link">
+    <title>Vervepremie</title>
+</head>
+<body>
+    <header>Premier for verving til klubben!</header>
+    <p>Du kan velge en premie for hver person du verver</p>
+    <form>
+        <label for="antallPers">Hvor mange personer har du vervet?</label><br>
+        <input type="range" id="antallPers" name="antallPers" min="1" max="3" value="1">
+        <output class="pers-output" for="antallPers"></output>
+    </form>
+    <form id="personInput">
+        <label for="pers1">Person 1: </label>
+        <input type="text" id="person1" name="pers1">
+    </form>
+    
+    <div id="prisvalg">
+        <button id="bildeEn" class="priser"><img src="bilder/bear.jpg"></button>
+        <button id="bildeTo" class="priser"><img src="bilder/kopp.jpg"></button>
+        <button id="bildeTre" class="priser"><img src="bilder/kamel.jpg"></button>
+    </div>
+    <button id="resetKnapp">Fjern valg</button>
+    <button id="bekreftKnapp">Bekreft</button>
+    <p id="utskrift"></p>
+    <script type="text/javascript" src="java.js"></script>
+</body>
+</html>

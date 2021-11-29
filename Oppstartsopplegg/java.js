@@ -552,7 +552,8 @@ function terninger() {
 
 
 
-document.getElementById("kryptKnapp").addEventListener("click", function() {
+
+function krypterEnkelt(){
   const kryptBokstav = document.getElementById("kryptStrInput").value;
   const kryptTall = document.getElementById("kryptIntInput").value;
   var bArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',"æ","ø","å"];
@@ -567,7 +568,7 @@ document.getElementById("kryptKnapp").addEventListener("click", function() {
   //console.log(bArray[nyBokstav]);
   
   let kryptOut = document.getElementById("kryptOutput");
-  kryptOut.innerHTML = "";
+  //kryptOut.innerHTML = "";
     for (let i = 0; i < nyttArray.length; i++) {
       var tall = (bArray.indexOf(nyttArray[i]) + parseInt(kryptTall));
       if (tall >= bArray.length) {
@@ -585,4 +586,9 @@ document.getElementById("kryptKnapp").addEventListener("click", function() {
     //var gammeltTall = (parseInt(tall) - parseInt(kryptTall)); Reversere kryptering
     //console.log("Gammel bokstav: " + bArray[gammeltTall])
   }
+}
+
+//Krypter hele
+document.getElementById("kryptStrInput").addEventListener("input", function(){
+  
 })

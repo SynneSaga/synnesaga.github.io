@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stilark.css">
+    <title>Registrering av bruker</title>
+</head>
+<body>
+    <div id="venstre">
+        <header>Registrer deg her:</header>
+        <form>
+            <label for="brukernavn">Brukernavn:</label>
+            <input type="text" id="brukernavn" name="brukernavn" required autofocus><p id="advarsel"></p>
+            <br>
+            <label for="epost">Epost-adresse:</label>
+            <input type="email" id="epost" name="epost" required><p id="mailAdvarsel"></p>
+            <br>
+            <label for="passord">Passord:</label>
+            <input type="password" id="passord" name="passord"required  min="5" max="15"><br>
+            <label for="konpassord">Konfirmer passord:</label> <!--Sjekk at er like-->
+            <input type="password" id="konpassord" name="konpassord"required  minlength="5" maxlength="15"><br>
+            
+            <p style="font-weight: bold;">Velg dine interesser:</p>
+            <input type="checkbox" id="sykling" name="sykling" value="Sykling">
+            <label for="sykling">Sykling</label>
+            <input type="checkbox" id="hest" name="hest" value="Hest">
+            <label for="hest">Hest</label>
+            <input type="checkbox" id="svomming" name="svomming" value="Svomming">
+            <label for="svomming">Svømming</label>
+            <input type="checkbox" id="handball" name="handball" value="Handball">
+            <label for="handball">Håndball</label><br>
+            <input type="checkbox" id="lyttefunksjoner" name="lyttefunksjoner" value="lyttefunksjoner">
+            <label for="lyttefunksjoner">Lyttefunksjoner</label>
+            <input type="checkbox" id="korker" name="korker" value="korker">
+            <label for="korker">Røde korker</label>
+            <input type="checkbox" id="boker" name="boker" value="boker">
+            <label for="boker">Bøker</label>
+            <input type="submit" id="submitBtn" value="submit">
+
+        </form>
+        <p style="font-weight: bold;">Velg profilbilde:</p>
+        
+        <button id="bildeEn" class="priser"><img src="bilder/bear.jpg"></button>
+        <button id="bildeTo" class="priser"><img src="bilder/kopp.jpg"></button>
+        <button id="bildeTre" class="priser"><img src="bilder/kamel.jpg"></button>
+    </div>
+    <div id="høyre" class="gjemt">
+        <p id="profOverskrift"></p>
+        <div id="profilHel">
+            <p id="navnUtskrift"></p>
+            <p id="mailUtskrift"></p>
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="java.js"></script>
+</body>
+</html>
