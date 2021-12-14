@@ -44,7 +44,7 @@ function checkTime(i) {
 //Musikk
 
 
-var arraySanger = ["All I want for Christmas is you - MCR","Himmel på jord - Kurt Nilsen","Peace on earth - David Bowie and Bing Crosby"]
+var arraySanger = ["All I want for Christmas is you - MCR","Himmel på jord - Kurt Nilsen","Peace on Earth - David Bowie and Bing Crosby"]
 const btn = document.getElementById("playBtn");
 
 btn.addEventListener("click", function(){
