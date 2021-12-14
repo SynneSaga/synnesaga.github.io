@@ -10,7 +10,7 @@
 <body>
     <div id="venstre">
         <header>Registrer deg her:</header>
-        <form>
+        <form id="formID">
             <label for="brukernavn">Brukernavn:</label>
             <input type="text" id="brukernavn" name="brukernavn" required autofocus><p id="advarsel"></p>
             <br>
@@ -27,30 +27,43 @@
             <label for="sykling">Sykling</label>
             <input type="checkbox" id="hest" name="hest" value="Hest">
             <label for="hest">Hest</label>
-            <input type="checkbox" id="svomming" name="svomming" value="Svomming">
+            <input type="checkbox" id="svomming" name="svomming" value="Svømming">
             <label for="svomming">Svømming</label>
-            <input type="checkbox" id="handball" name="handball" value="Handball">
+            <input type="checkbox" id="handball" name="handball" value="Håndball">
             <label for="handball">Håndball</label><br>
-            <input type="checkbox" id="lyttefunksjoner" name="lyttefunksjoner" value="lyttefunksjoner">
+            <input type="checkbox" id="lyttefunksjoner" name="lyttefunksjoner" value="Lyttefunksjoner">
             <label for="lyttefunksjoner">Lyttefunksjoner</label>
-            <input type="checkbox" id="korker" name="korker" value="korker">
+            <input type="checkbox" id="korker" name="korker" value="Røde korker">
             <label for="korker">Røde korker</label>
-            <input type="checkbox" id="boker" name="boker" value="boker">
+            <input type="checkbox" id="boker" name="boker" value="Bøker">
             <label for="boker">Bøker</label>
-            <input type="submit" id="submitBtn" value="submit">
+            <input type="submit" id="submitBtn" value="Submit">
+            <p style="font-weight: bold;">Velg profilbilde:</p>
+            <label>
+                <input type="radio" id="bear" name="profilbilde">
+                <img src="bilder/bear.jpg">
+            </label>
+            <label>
+                <input type="radio" id="kopp" name="profilbilde">
+                <img src="bilder/kopp.jpg">
+            </label><label>
+                <input type="radio" id="kamel" name="profilbilde">
+                <img src="bilder/kamel.jpg">
+            </label>
+            <!--Hvis du har samme navn på alle tre radioinputs, kan kun en av dem velges.-->
 
         </form>
-        <p style="font-weight: bold;">Velg profilbilde:</p>
         
-        <button id="bildeEn" class="priser"><img src="bilder/bear.jpg"></button>
-        <button id="bildeTo" class="priser"><img src="bilder/kopp.jpg"></button>
-        <button id="bildeTre" class="priser"><img src="bilder/kamel.jpg"></button>
+        
     </div>
     <div id="høyre" class="gjemt">
-        <p id="profOverskrift"></p>
+        <p id="profOverskrift">Slik ser profilen din ut:</p>
         <div id="profilHel">
-            <p id="navnUtskrift"></p>
-            <p id="mailUtskrift"></p>
+            <img id="pfpUtskrift" src="bilder/hvit.jpg">
+            <p id="navnUtskrift">Brukernavn</p>
+            <p id="mailUtskrift">Mailadresse</p>
+            <p>Interesser:</p>
+            <p id="interesserOut"></p>
         </div>
         
     </div>

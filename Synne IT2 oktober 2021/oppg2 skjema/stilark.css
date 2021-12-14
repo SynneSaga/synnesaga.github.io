@@ -9,17 +9,33 @@ body {
 #venstre {
     flex:1;
     background-color: white;
+    border-radius: 10px 0 0 10px;
 }
 
 #høyre {
     flex:1;
     background-color: white;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+  
 }
 
 #profilHel {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    width:95%;
+    align-items: center;
+    background-color: darkslateblue;
+    border-radius:10px;
+    margin: 5px;
+    padding-top:10px;
+    color:white;
+    font-weight: bold;
+}
+
+#pfpUtskrift {
+    flex:1;
+    width:160px;
 }
 
 header, #profOverskrift {
@@ -28,7 +44,7 @@ header, #profOverskrift {
     margin:10px;
 }
 
-form {
+form, #profilbilder {
     margin:10px;
 }
 
@@ -61,8 +77,11 @@ img:active{
     margin:0px;
 }
 
-
-
 #navnUtskrift:first-letter {
     text-transform: capitalize;
+}
+
+#navnUtskrift, #mailUtskrift, #interesserOut {
+    margin:5px;
+    list-style-type: none;
 }

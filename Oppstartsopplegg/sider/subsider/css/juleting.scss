@@ -1,0 +1,128 @@
+body{
+    overflow: hidden;
+    margin:0;
+}
+
+@font-face {
+    font-family: 'Snowflakes';
+    src: url('../fonter/Christmas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Strawberry';
+    src: url('../fonter/Strawberry.ttf') format('truetype'),
+        url('../fonter/Strawberry.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+#midten {
+    position:fixed;
+    left:35%;
+    top:25%;
+    font-family:'Snowflakes';
+}
+
+#overskrift{
+    margin:0;
+    font-size: 15vh;
+}
+
+#klokke {
+    margin:-23px;
+    font-size: 15vh;
+}
+
+#musikkboks {
+    position: fixed;
+    right:5%;
+    bottom:5%;
+    background-color: white;
+    padding:10px;
+    border-radius: 10px;
+    font-family: 'Strawberry';
+    font-size: xx-large;
+    word-wrap: break-word;
+    max-width: 20%;
+}
+
+#playBtn {
+    color:white;
+}
+
+.wrapper {
+    width:100vw;
+    height:100vh;
+    //background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%);
+    background-color: #90d5ec;
+    background-image: linear-gradient(340deg, #90d5ec 0%, #fc575e 97%);
+    overflow: hidden;
+}
+$s1:"";
+$s2:"";
+$s3:"";
+//300 partikler per lag, evt endre
+@for $i from 1 through 300 {
+    $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    $s2: $s2 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    $s3: $s3 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    @if $i < 300 {
+        $s1: $s1 + ",";
+        $s2: $s2 + ",";
+        $s3: $s3 + ",";
+    }
+}
+.snow {
+    border-radius: 50%;
+    opacity: 0.8;
+    position: absolute;
+    top:-100vh;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+//framste layer
+.layer1 {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter:blur(1.5px);
+    box-shadow: #{$s1};
+    animation-duration: 6s;
+}
+.layer1.a {
+    animation-delay: -3s;
+}
+.layer2 {
+    width: 1.2rem;
+    height: 1.2rem;
+    filter:blur(3px);
+    box-shadow: #{$s2};
+    animation-duration: 8s;
+}
+.layer2.a {
+    animation-delay: -4s;
+}
+
+//bakerste layer
+.layer3 {
+    width: 0.8rem;
+    height: 0.8rem;
+    filter:blur(6px);
+    box-shadow: #{$s3};
+    animation-duration: 10s;
+}
+.layer3.a {
+    animation-delay: -5s;
+}
+@keyframes fall {
+    100% {transform: translateY(200vh); }
+}
+
+
+//kode til bakgrunnen hentet fra https://codepen.io/redstapler/pen/MZXJZx , https://www.youtube.com/watch?v=8eyAoBBucHk
+//Bakgrunnsfarge: Deja vu fra https://www.eggradients.com/category/sunset-gradient

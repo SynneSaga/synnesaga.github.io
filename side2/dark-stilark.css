@@ -47,20 +47,21 @@ body.dark-theme {
     flex-direction: row;
 }
 
-a {
+.linker {
     color:black;
 }
 
-a.dark-theme {
+.linker.dark-theme {
     color: rgb(201, 201, 201);
 }
-a:visited {
+
+/*a:visited {
     color:black;
 }
 
 a:visited.dark-theme {
     color: rgb(201, 201, 201);
-}
+}*/
 
 .bokser {
     font-size: 2vw;
@@ -112,10 +113,10 @@ a:visited.dark-theme {
     color: #809fff;
   }*/
 
-  .knappklasse {
+  /*.knappklasse {
       background: url("bilder/morkknapp.png") no-repeat scroll 0 0 transparent;
   }
 
   .knappklasse.dark-theme {
     background: url("bilder/morklysknapp.png") no-repeat scroll 0 0 transparent;;
-}
+}*/

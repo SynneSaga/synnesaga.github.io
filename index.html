@@ -19,19 +19,20 @@
         </div>
         <div class="hoveddel">
             <div class="bokser" id="hjelp">
-                <a  style="text-decoration: none;" href="askm/askmindex.html">Ask menighetshus</a><br>
-                <a style="text-decoration: none;" href="side2/index.html">Test av meny, virker ikke atm</a><br>
-                <a style="text-decoration: none;" href="Oppstartsopplegg/index.html">Ny side for oppstart</a><br>
+                <a class="linker" style="text-decoration: none;" href="askm/askmindex.html">Ask menighetshus</a><br>
+                <a class="linker" style="text-decoration: none;" href="side2/index.html">Test av meny, virker ikke atm</a><br>
+                <a class="linker" style="text-decoration: none;" href="Oppstartsopplegg/index.html">Ny side for oppstart</a><br>
+                <a class="linker" style="text-decoration: none;" href="Oppstartsopplegg/sider/subsider/nedtellingjul.html">Julenedtelling!!</a>
             </div>
             <div class="bokser" id="help">
-                <a id="c" style="text-decoration: none;" href="#">Nye greier ig</a>
-                <img src="side2/bilder/monkerd.png" style="width: 100%;">
+                <a class="linker" id="c" style="text-decoration: none;" href="#">Nye greier ig</a>
+                <img src="side2/bilder/monkerd.png" style="width: 100%; border-radius: 10px; margin: 10px 0px;">
             </div>
             
         </div>
         <div class="footer">
 
-            <button id="knapp" class="knappklasse" onclick="myFunction">Toggle Dark-Mode</button>
+            <button id="knapp" class="knappklasse" onclick="myFunction">Light/dark mode (virker dårlig atm)</button>
             <script>
                 document.getElementById("knapp").addEventListener("click", myFunction);
             function myFunction() {
@@ -42,12 +43,14 @@
             element.classList.toggle("dark-theme");
             var element = document.getElementById("header");
             element.classList.toggle("dark-theme");
-            var element = document.getElementById("a");
+            /*var element = document.getElementsByTagName("linker");
+            element.classList.toggle("dark-theme");
+            var element = document.getElementsByTagName("a");
             element.classList.toggle("dark-theme");
             var element = document.getElementById("b");
             element.classList.toggle("dark-theme");
             var element = document.getElementById("c");
-            element.classList.toggle("dark-theme");
+            element.classList.toggle("dark-theme");*/
                     }
             </script>
             
