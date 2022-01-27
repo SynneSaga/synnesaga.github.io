@@ -1,0 +1,27 @@
+
+body {
+    font-family: ComicSans;
+    font-weight: bold;
+}
+
+header {
+    margin: 0 10px;
+}
+.storyboard {
+    display:flex;
+    flex-direction: row;
+}
+
+.bilder {
+    flex:1;
+    max-width:300px;
+    margin:10px;
+}
+
+@font-face {
+    font-family: 'ComicSans';
+    src: url("../fonter/comicsans.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
