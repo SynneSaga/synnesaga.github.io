@@ -8,7 +8,7 @@ function startTime() {
     h = checkTime(h);
     m = checkTime(m);
     s = checkTime(s);
-    let decD = 23 - d;
+    let decD = 364 - d;
     let decH = 23 - h;
     let decM = 59 - m;
     let decS = 59 - s;
@@ -49,7 +49,8 @@ const btn = document.getElementById("playBtn");
 
 btn.addEventListener("click", function(){
     let shuffledArray = arraySanger.sort((a, b) => 0.5 - Math.random()); //return delen etter =>, sorter i ascending order og
-    var tidTall = length[shuffledArray] ;
+    var tidTall = length[shuffledArray];
+    console.log(tidTall);
     document.getElementById("nowPlay").innerHTML = shuffledArray[0];
             var lyd = "musikk/" + shuffledArray[0] + ".mp3";
             var audio = new Audio(lyd);

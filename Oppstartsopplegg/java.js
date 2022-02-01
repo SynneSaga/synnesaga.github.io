@@ -444,7 +444,11 @@ function kjoreKort() {
   }
 }
 
-
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+}
 
 
 function fargeVelger() {
@@ -481,7 +485,7 @@ function playSound(url) {
   audio.play();
 }
 
-/*function kaosKnapp() {
+function kaosKnapp() {
   //document.getElementById("header").style.backgroundColor = fargeVelger();
   //document.getElementById("meny").style.backgroundColor = fargeVelger();
   //document.getElementById("fotområde").style.backgroundColor = fargeVelger();
@@ -500,21 +504,27 @@ function playSound(url) {
   r.style.setProperty('--bakfar', fargeVelger());
   r.style.setProperty('--tekstfarge', fargeVelger());
   r.style.setProperty('--headertekst', fargeVelger());
-  
-}*/
+}
 
-/*(function loop() {
-  var rand = Math.round(Math.random() * (3000 - 500)) + 500;
-  document.getElementById('kaosAv').addEventListener("click",  function() {
-    rand = 0;
-    console.log("ahdfk")
-  }
-  ) 
-    setTimeout(function() {
-      kaosKnapp();
-      loop(); 
-  }, rand);
-}());*/
+document.getElementById('kaosAv').addEventListener("click",  function() {
+  trykketKnapp = 1;
+  console.log(trykketKnapp)
+}); 
+
+document.getElementById('kaosKnapp').addEventListener("click",  function() {
+  var trykketKnapp = 0;
+  (function loop() {
+    var rand = Math.round(Math.random() * (3000 - 500)) + 500;
+      setTimeout(function() {
+        kaosKnapp();
+        loop(); 
+    }, rand);    
+    if (trykketKnapp === 1){
+      return;
+    }
+  }());
+});
+
 
 
 /*avknapp*/

@@ -9,8 +9,20 @@
     <title>Document</title>
 </head>
 <body onload="startTime()">
-    
+    <div id="heleboksen">
         
+        <div id="trewrapper">
+            <img id="treer" src="bilder/svgtreto.png">
+            <img id="midttreer" src="bilder/svgtre.png">
+            <!--<svg height="250" width="600" style="position:absolute; left:50; top:100; z-index:-1;">
+                <polygon points="75,0 0,250 150,250"></polygon> Top, left, right(left/right,up/down , går 0 helt til venstre/oppe, mer er høyre/nede)
+                <polygon points="150,0 0,250 225,250"></polygon>
+                <polygon points="225,0 112,250 300,250"></polygon>
+                <polygon points="300,0 225,250 400,250"></polygon>
+            </svg>-->
+            <!--<p id="tretekst">Julen varer helt til påske!</p>-->
+        </div>
+       
         <div class="wrapper">
             <div class="snow layer1 a"></div>
             <div class="snow layer1"></div> 
@@ -18,17 +30,27 @@
             <div class="snow layer2"></div>
             <div class="snow layer3 a"></div>
             <div class="snow layer3"></div>
-       </div>
-       <div id="midten">
-           <p id="overskrift">Nedtelling til jul: </p>
-            <p id="klokke"></p>
-            
         </div>
-    
-    <div id="musikkboks">
-        <p style="margin:0;">Now playing...</p>
-        <p style="margin:5px 0px;" id="nowPlay"></p>
-        <button id="playBtn"><i class="fas fa-play"></i></button>
+       
+        <div id="midten">
+            <p id="overskrift">Nedtelling til jul: </p>
+            <p id="klokke"></p>
+        </div>
+        
+        <div id="paskewrapper">
+            <p id="pasketekst">Men julen varer helt til påske!</p>
+            <img id="bunny" src="bilder/easterback3.png">
+            <div class="sol">
+                
+            </div>
+        </div>
+        
+
+        <div id="musikkboks">
+            <p style="margin:0;">Now playing...</p>
+            <p style="margin:5px 0px;" id="nowPlay"></p>
+            <button id="playBtn"><i class="fas fa-play"></i></button>
+        </div>
     </div>
 </body>
 <script src="https://kit.fontawesome.com/e1cb382ee6.js" crossorigin="anonymous"></script>
