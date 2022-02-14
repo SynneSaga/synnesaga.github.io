@@ -602,3 +602,5 @@ function krypterEnkelt(){
 document.getElementById("kryptStrInput").addEventListener("input", function(){
   
 })
+
+
