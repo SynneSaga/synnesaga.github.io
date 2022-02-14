@@ -1,0 +1,112 @@
+body {
+    background-image: linear-gradient(340deg, #BA0021 25%,#FF0800 75%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Strawberry';
+    font-size: xx-large;
+    text-shadow: 0 0 3px black;
+    color:white;
+}
+
+header {
+    
+    flex: 1;
+}
+
+.container {
+    flex: 1;
+    
+}
+
+@font-face {
+    font-family: 'Strawberry';
+    src: url("../fonter/Strawberry.ttf") format("truetype"), url("../fonter/Strawberry.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+.heart {
+display:inline-block;
+width: 200px; 
+aspect-ratio: 1;
+border-image: radial-gradient(red 69%,#0000 70%) 84.5% fill/100%;
+clip-path: polygon(-41% 0,50% 91%, 141% 0);
+}
+
+
+.wrapper {
+width: 100vw;
+height: 100vh;
+position: relative;
+}
+  
+$s1:"";
+$s2:"";
+$s3:"";
+
+@for $i from 1 through 400 {
+    $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    $s2: $s2 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    $s3: $s3 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    @if $i < 400 {
+        $s1: $s1 + ",";
+        $s2: $s2 + ",";
+        $s3: $s3 + ",";
+    }
+}
+
+.snow {
+    border-radius: 50%;
+    opacity: 0.8;
+    position: absolute;
+    top:-100vh;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.layer1 {
+    border-image: radial-gradient(rgb(255, 255, 255) 69%,#0000 70%) 84.5% fill/100%;
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+    width: 3rem; 
+    aspect-ratio: 1;
+    filter:blur(1.5px);
+    box-shadow: #{$s1};
+    animation-duration: 6s;
+}
+.layer1.a {
+    animation-delay: -3s;
+}
+.layer2 {
+    border-image: radial-gradient(rgb(255, 255, 255) 69%,#0000 70%) 84.5% fill/100%;
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+    width: 2rem; 
+    aspect-ratio: 1;
+    filter:blur(3px);
+    box-shadow: #{$s2};
+    animation-duration: 8s;
+}
+.layer2.a {
+    animation-delay: -4s;
+}
+.layer3 {
+    border-image: radial-gradient(rgb(255, 255, 255) 69%,#0000 70%) 84.5% fill/100%;
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+    width: 1rem; 
+    aspect-ratio: 1;
+    filter:blur(6px);
+    box-shadow: #{$s3};
+    animation-duration: 10s;
+}
+.layer3.a {
+    animation-delay: -5s;
+}
+@keyframes fall {
+    100% {transform: translateY(200vh); }
+}
