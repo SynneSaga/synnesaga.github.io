@@ -20,6 +20,16 @@ let people = [
     "age":20,
     "personality":"shy"
     },
+
+    {"name":"Gary",
+    "age":16,
+    "personality":"kind"
+    },
+
+    {"name":"Pål",
+    "age":17,
+    "personality":"angry"
+    },
 ]
 
 //ikke bruk [] her, kun for flere
@@ -30,13 +40,71 @@ let nyperson = {
 }
 
 let liteArray = ["heisann", "hadet", "ok", "heisann", "ny"]
+
 //people.unshift(nyperson) //setter inn på begynnelsen av array
 //people.push(nyperson) //setter inn på slutten av array
 //people.pop; //fjerner siste del av array
 //people.splice(2,0,nyperson) //setter inn på posisjon 2, fjerner ingenting, legger inn objektet nyperson
 //liteArray.splice(liteArray.indexOf("heisann"),2) //Fjerner første objektet med heisann, pluss objektet etter. Ignorerer andre heisann.
 
+//array.slice().sort(function(a,b))sorterer etter ting ble gjort
 //console.log(liteArray)
+let tabellen = "<tr><th>Person</th><th>Alder</th></tr>";
+
+for (let i = 0;i<people.length;i++){
+   document.getElementById("utskrift").innerHTML += ("<li>" + people[i].name + " er <span class=tallFarge>" + people[i].age + " </span>år gammel.</li>");
+}
+
+//LAGE EGEN SORT FUNCTION ETTER ET SPESIFIKT OBJEKT I ARRAY!!! HER ER ETTER ALDER FRA ARRAYET PEOPLE
+//NEDERST SETTER DU ARRAY.SORT(NAVNPÅFUNKSJON)
+
+function sorterByAlder(a, b) {
+    if(a.age < b.age){
+        return -1; 
+    }
+
+    if(a.age > b.age){
+        return 1;
+    }
+    return 0;
+}
+
+people.sort(sorterByAlder)
+
+//console.log(people)
+
+for (let i = 0;i<people.length;i++){
+    tabellen += "<tr><td>" + people[i].name + "</td><td>" + people[i].age + "</td></tr>";
+ }
+ document.getElementById("tabell").innerHTML = tabellen
+
+let antallUnder20 = 0;
+let folkSomErUnder20 = [];
+
+ for(let folk of people) {
+     if(folk.age < 20) {
+        antallUnder20 += 1; //øker antallet folk som er under 20 i variabel;
+        folkSomErUnder20.push(" " + folk.name); //legger til personen som er under 20 sist i arrayet jeg nettopp lagde, folkSomErUnder20
+     }
+ }
+
+
+document.getElementById("ungFolk").innerHTML = "<p>Antall folk som er under 20: <span class=tallFarge>" + antallUnder20 + "</span> stk. <br> Disse er: " + folkSomErUnder20 + ".</p>";
+
+//Fjerne disse folkene fra arrayet:
+for (let i = 0;i<people.length;i++){
+var nyTabell = people.splice(folkSomErUnder20[i]);
+}
+console.log(nyTabell)
+
+
+
+//gjør samme greiene ^^ vv
+/*for (let folk of people) {
+    document.getElementById("utskrift").innerHTML += folk.name;
+}*/
+
+
 
 /*  Array.splice(
     <index where to start>,
@@ -124,7 +192,33 @@ document.getElementById("knappFram").addEventListener("click", function(){
 
 //5
 let tall = [1,4,2,6,8]
-tall.sort();
-console.log(tall)
+//tall.sort();
+//console.log(tall)
 
 //let 
+
+//sort gjør tall om til tekst, 12 blir til 1 2
+//array.sort(function(a, b){return a-b}); Dette skal gjøre dem ordetnlig sortert
+/*tall.sort(function(a,b) {
+    console.log("sammenligner " + a + ", " + b)
+    return a - b;
+})*/
+
+/*små bokstaver sorteres annerledes enn store
+array.sort(function(a,b) {
+    a = a.toUpperCase();
+    b = b.toUpperCase();
+    return b<a;
+})
+*/
+
+// => function
+
+/*Traditional Anonymous Function
+function (a, b){
+  return a + b + 100;
+}
+
+// Arrow Function
+(a, b) => a + b + 100;
+*/

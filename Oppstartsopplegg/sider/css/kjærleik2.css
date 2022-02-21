@@ -1,0 +1,136 @@
+@charset "UTF-8";
+html {
+  background-color: #000;
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+/*
+  h1 {
+    font-size: 8em;
+    font-family: 'Merienda One';
+    font-weight: 400;
+    position: fixed;
+    top:50%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    line-height: 1;
+    transform: translateY(-50%);
+    z-index: 100;
+    text-shadow: 0 2px 10px rgba(black,0.8);
+  }
+  */
+body:before, body:after,
+.more-snow:before,
+.more-snow:after {
+  content: "";
+  position: fixed;
+  top: -3000%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.01);
+  background-image: url(../bilder/hjerter_mindre.png);
+  background-size: 30%;
+  -webkit-animation-name: MOVE-BG;
+  -webkit-animation-duration: 500s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  font-family: 'Strawberry';
+  font-size: 4rem;
+  text-shadow: 0 0 3px black;
+  color: white;
+}
+
+body:before {
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+  opacity: 0.8;
+}
+
+body:after {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  top: -1500%;
+  background-image: url(../bilder/hjerter_tiny.png);
+  background-size: 90%;
+  -webkit-animation-duration: 200s;
+          animation-duration: 200s;
+  z-index: 0;
+}
+
+.more-snow:before {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  opacity: 0.8;
+  top: -2500%;
+  background-size: 60%;
+  -webkit-animation-duration: 400s;
+          animation-duration: 400s;
+  z-index: 0;
+}
+
+.more-snow:after {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  opacity: 0.8;
+  top: -2000%;
+  background-image: url(../bilder/hjerter_små.png);
+  background-size: 70%;
+  -webkit-animation-duration: 300s;
+          animation-duration: 300s;
+  z-index: 0;
+}
+
+@-webkit-keyframes MOVE-BG {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
+}
+
+header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  z-index: 1;
+}
+
+.container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: 'Strawberry';
+  src: url("../fonter/Strawberry.ttf") format("truetype"), url("../fonter/Strawberry.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*# sourceMappingURL=kjærleik2.css.map */
