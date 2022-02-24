@@ -32,14 +32,15 @@ let people = [
     },
 ]
 
+
 //ikke bruk [] her, kun for flere
-let nyperson = {
+/*let nyperson = {
     "name":"Frøya",
     "age":23,
     "personality":"pissy"
 }
 
-let liteArray = ["heisann", "hadet", "ok", "heisann", "ny"]
+let liteArray = ["heisann", "hadet", "ok", "heisann", "ny"]*/
 
 //people.unshift(nyperson) //setter inn på begynnelsen av array
 //people.push(nyperson) //setter inn på slutten av array
@@ -49,6 +50,8 @@ let liteArray = ["heisann", "hadet", "ok", "heisann", "ny"]
 
 //array.slice().sort(function(a,b))sorterer etter ting ble gjort
 //console.log(liteArray)
+
+
 let tabellen = "<tr><th>Person</th><th>Alder</th></tr>";
 
 for (let i = 0;i<people.length;i++){
@@ -71,7 +74,6 @@ function sorterByAlder(a, b) {
 
 people.sort(sorterByAlder)
 
-//console.log(people)
 
 for (let i = 0;i<people.length;i++){
     tabellen += "<tr><td>" + people[i].name + "</td><td>" + people[i].age + "</td></tr>";
@@ -91,10 +93,18 @@ let folkSomErUnder20 = [];
 
 document.getElementById("ungFolk").innerHTML = "<p>Antall folk som er under 20: <span class=tallFarge>" + antallUnder20 + "</span> stk. <br> Disse er: " + folkSomErUnder20 + ".</p>";
 
+/*let nyTabell = [];
+
 //Fjerne disse folkene fra arrayet:
-for (let i = 0;i<people.length;i++){
-var nyTabell = people.splice(folkSomErUnder20[i]);
-}
+for(let folk of people) {
+    if(folk.age < 20) {
+        nyTabell.push(folk)
+    }
+}*/
+
+
+let nyTabell = people.filter(p => nyTabell.age <= 20)
+
 console.log(nyTabell)
 
 
