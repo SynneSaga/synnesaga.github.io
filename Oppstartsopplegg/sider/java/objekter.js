@@ -61,6 +61,9 @@ for (let i = 0;i<people.length;i++){
 //LAGE EGEN SORT FUNCTION ETTER ET SPESIFIKT OBJEKT I ARRAY!!! HER ER ETTER ALDER FRA ARRAYET PEOPLE
 //NEDERST SETTER DU ARRAY.SORT(NAVNPÅFUNKSJON)
 
+
+
+
 function sorterByAlder(a, b) {
     if(a.age < b.age){
         return -1; 
@@ -108,9 +111,11 @@ let nyTabell = people.filter(p => nyTabell.age <= 20)
 console.log(nyTabell)
 
 
-
-//gjør samme greiene ^^ vv
-/*for (let folk of people) {
+/*for (let i = 0;i<people.length;i++){
+    
+}
+gjør samme greiene ^^ vv
+for (let folk of people) {
     document.getElementById("utskrift").innerHTML += folk.name;
 }*/
 
