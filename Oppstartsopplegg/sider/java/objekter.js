@@ -96,19 +96,15 @@ let folkSomErUnder20 = [];
 
 document.getElementById("ungFolk").innerHTML = "<p>Antall folk som er under 20: <span class=tallFarge>" + antallUnder20 + "</span> stk. <br> Disse er: " + folkSomErUnder20 + ".</p>";
 
-/*let nyTabell = [];
-
+//let nyTabell = [];
 //Fjerne disse folkene fra arrayet:
-for(let folk of people) {
+/*for(let folk of people) {
     if(folk.age < 20) {
         nyTabell.push(folk)
     }
 }*/
-
-
-let nyTabell = people.filter(p => nyTabell.age <= 20)
-
-console.log(nyTabell)
+/*nyTabell = people.filter(p => nyTabell.age <= 20)*/
+//console.log(nyTabell)
 
 
 /*for (let i = 0;i<people.length;i++){
@@ -176,9 +172,9 @@ let personaldre = people.map(person => {
 let matvarer = ["ost", "paprika", "brød", "kaviar"]
 
 matvarer.unshift("melk")
-matvarer.pop();
+matvarer.pop(); //fjerner siste elementet og gir det i return
 matvarer.splice(matvarer.indexOf("brød"),1,"knekkebrød")
-//console.log(matvarer)
+console.log(matvarer)
 
 //2
 let trær = ["lønn","hassel","bjørk","eik","blodlønn","furu","gran"];

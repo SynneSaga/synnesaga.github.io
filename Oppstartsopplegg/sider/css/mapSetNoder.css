@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    display:grid;
+}
+.stjerne {
+    position:absolute;
+    background-color: white;
+    border-radius:50%;
+    z-index: 0;
+}
+
+input,.inputs{
+    z-index:1;
+}
+
+

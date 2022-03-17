@@ -1,0 +1,26 @@
+body {
+    width:100%;
+    height:100%;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.tabeller {
+    flex:1;
+}
+
+table {
+    flex:1;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row; 
+}
+
+.endringTabeller {
+    flex:1;
+}

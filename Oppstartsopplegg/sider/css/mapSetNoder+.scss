@@ -1,0 +1,117 @@
+body {
+    background-color: black;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    display:grid;
+}
+.stjerne {
+    position:absolute;
+    background-color: white;
+    border-radius:50%;
+    z-index: 0;
+}
+
+.logo {
+    animation-name:logo;
+    animation-duration: 9s;
+    height:99%;
+    width:auto;
+    display: block;
+    margin:auto;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logo {
+    from {height:95%;}
+    to{height:0;}
+}
+
+.tekst {
+    animation-name: tekst;
+    animation-duration: 8s;
+    animation-delay:6s;
+    width:50%;
+    margin:auto;
+    position:fixed;
+    color:rgb(251,235,28);
+    font-family: "Starwars";
+    display:block;
+    margin:auto;
+    bottom:-10%;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+input,.inputs{
+    z-index:1;
+    color:yellow;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Starwars";
+    border:none;
+}
+
+@keyframes tekst {
+    from{bottom:0}
+    to{bottom:80%}
+}
+/*
+
+body,
+.more-snow {
+  &:before,
+  &:after {
+    content: "";
+    position: fixed;
+    bottom: -3000%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(black, 0.01);
+    -webkit-animation-name: MOVE-BG;
+    -webkit-animation-duration: 500s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+}
+
+.more-snow {
+    &:before {
+      filter: blur(4px);
+      opacity: 0.8;
+      bottom: -2500%;
+      background-size: 60%;
+      animation-duration: 400s;
+      z-index: 0;
+    }
+  
+    //Nest bakerste
+    &:after {
+      filter: blur(2px);
+      opacity: 0.8;
+      bottom: -2000%;
+      background-image: url(../bilder/hjerter_små.png);
+      background-size: 70%;
+      animation-duration: 300s;
+      z-index: 0;
+    }
+  }
+  
+  @-webkit-keyframes MOVE-BG {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-70%);
+    }
+  }
+  */
+    
+  @font-face {
+    font-family: 'Starwars';
+    src: url("../fonter/starwars.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
