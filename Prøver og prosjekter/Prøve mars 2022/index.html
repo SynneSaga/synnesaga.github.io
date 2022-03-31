@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema-velgjer</title>
+    <link rel="stylesheet" href="stilark.css">
+</head>
+<body onload="riktigeFarger()">
+    <select id="temaVelger" onchange="riktigeFarger()">
+        <option>Dark (standard)</option>
+        <option>Light</option>
+    </select>
+
+    <form id="egneFarger">
+        <label for="nyTekst">Tekstfarge</label>
+        <input type="color" id="nyTekst" name="nyTekst">
+
+        <label for="nyBakgrunn">Bakgrunnsfarge</label>
+        <input type="color" id="nyBakgrunn" name="nyBakgrunn">
+
+        <label for="nyVarselTekst">Varselfarge</label>
+        <input type="color" id="nyVarselTekst" name="nyVarselTekst">
+
+        <label for="nyVarselBakgrunn">Varselfarge</label>
+        <input type="color" id="nyVarselBakgrunn" name="nyVarselBakgrunn">
+
+        <label for="temaNavn">Navn:</label>
+        <input type="text" id="temaNavn" name="temaNavn" placeholder="Kult tema nr. 6">
+
+        <button type="submit" id="knapp">Registrer tema</button>
+    </form>
+
+    <!-- Dette er delen du skal gjere stilendringar på. -->
+    <div id="boks">
+        <h1>Eksempeloverskrift</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laboriosam modi, tempora non, 
+            repellendus aspernatur placeat quam explicabo veniam recusandae odio sed nostrum saepe pariatur 
+            ab quo possimus soluta! Doloribus!
+        </p>
+        <h2 id="varsel">Varsel</h2>
+    </div>
+    <!-- Ferdig med delen du skal gjere stilendringar på. -->
+
+    <script src="javascript.js"></script>
+</body>
+</html>
