@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/gamging.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="stats">
+
+        <div id="health">
+            <div id="myside">
+                <p id="myhp">My HP: 100</p>
+            </div>
+            <div id="enemyside">
+                <p id="enemyhp">Sweden's HP: 100</p>
+            </div>
+        </div>
+
+        <div class="info">
+            <p id="status">Waiting for your next move...</p>
+        </div>
+        
+    </div>
+    <div id="attackarea">
+        <button id="angrip" onclick="enRunde()">Attack!<img id="bilde" src="bilder/sverd.png"> </button>
+    </div>
+    <div id="meny">
+        <select id="enemies" onchange="endreFlagg()">
+            <option>Velg fiende</option> 
+            <option>Sverige</option>
+            <option>Danmark</option>
+        </select>
+        <select id="music">
+            <option>Velg musikk</option> 
+            <option>Happy</option>
+            <option>Sad</option>
+        </select>
+        <select id="colors">
+            <option>Velg farge</option> 
+            <option>Dark</option>
+            <option>Light</option>
+        </select>
+        <select id="gamemode">
+            <option>Velg gamemode</option> 
+            <option>Dark</option>
+            <option>Light</option>
+        </select>
+    </div>
+    
+</body>
+<script type="text/javascript" src="java/gamging.js"></script><!--alltid bruk src-->
+</html>
