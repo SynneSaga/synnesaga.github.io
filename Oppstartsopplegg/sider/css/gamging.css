@@ -82,3 +82,20 @@ select {
     height:40px;
     font-size: 1.2vw;
 }
+
+#musikkboks {
+    position: fixed;
+    right:5%;
+    bottom:5%;
+    background-color: white;
+    padding:10px;
+    border-radius: 10px;
+    font-family: 'Strawberry';
+    font-size: xx-large;
+    word-wrap: break-word;
+    max-width: 20%;
+}
+
+#playBtn {
+    color:white;
+}

@@ -52,8 +52,9 @@ btn.addEventListener("click", function(){
     var tidTall = length[shuffledArray];
     console.log(tidTall);
     document.getElementById("nowPlay").innerHTML = shuffledArray[0];
-            var lyd = "musikk/" + shuffledArray[0] + ".mp3";
-            var audio = new Audio(lyd);
-            audio.load();
-            audio.play();
-    })
+    
+    var lyd = "musikk/" + shuffledArray[0] + ".mp3";
+    var audio = new Audio(lyd);
+    audio.load();
+    audio.play();
+})
