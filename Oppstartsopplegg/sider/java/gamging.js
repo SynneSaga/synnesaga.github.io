@@ -9,11 +9,12 @@ var enemy = [{"name":"Sweden",
             "flagg":"danmark"}
         ]
 
+
+
 var enemies = document.getElementById("enemies")
 var i = 0;
 
 function endreFlagg(){
-    var enemyhp = enemy[i].hp;
     if(enemies.selectedIndex == 0){
         enemies.selectedIndex = 0;
     }
@@ -33,6 +34,7 @@ var enemyhp = enemy[i].hp;
 var enemyhpText = document.getElementById("enemyhp");
 
 
+
 function attackEnemy(){
     if(enemies.selectedIndex == 0){ //slik at hvis index er 0 blir den ikke lik -1
         i = 0;
@@ -49,7 +51,8 @@ function attackEnemy(){
         
         document.getElementById("enemyside").style.color = "white";
         statustext.innerText = "You did " + skadeenemy.toFixed(0) + " damage!"
-        
+
+        animer(norsksverd, "roternorsk")
     }
 
     else {
@@ -91,6 +94,7 @@ function enemyAttack () {
     document.getElementById("myside").style.color = "white"; //Setter egen farge til hvit
     
     statustext.innerText = enemy[i].name + " did " + skadeselv.toFixed(0) + " damage!"
+    animer(langtsverd, "rotersvensk")
 }
 
 
@@ -115,41 +119,32 @@ function enRunde() {
 
 var arraySanger = ["HotelCalifornia","she ri"];
 var valgtMusikk = document.getElementById("music");
+var audioelement = document.getElementById("audioelement");
 
 document.getElementById("music").addEventListener("change", function() {
-    
     if (valgtMusikk.selectedIndex == 0) {
-        
-        i = 0;
-        console.log(arraySanger[i])
-        var lyd = "musikk/" + arraySanger[i] + ".mp3";
-        var audio = new Audio(lyd);
-            
-        audio.load();
-        audio.play();
-           
+        console.log("Ingen musikk valgt")
     }
     
     else {
         i = valgtMusikk.selectedIndex - 1;
-        console.log(arraySanger[i])
-        var lyd = "musikk/" + arraySanger[i] + ".mp3";
-        var audio = new Audio(lyd);
-            audio.load();
-            audio.play();
-    }
+        audioelement.src = "musikk/" + arraySanger[i] + ".mp3";
+        audioelement.play();
+    } 
 });
 
 
-/*const btn = document.getElementById("playBtn");
 
-btn.addEventListener("click", function(){
-    let shuffledArray = arraySanger.sort((a, b) => 0.5 - Math.random()); //return delen etter =>, sorter i ascending order og
-    var tidTall = length[shuffledArray];
-    console.log(tidTall);
-    document.getElementById("nowPlay").innerHTML = shuffledArray[0];
-            var lyd = "musikk/" + shuffledArray[0] + ".mp3";
-            var audio = new Audio(lyd);
-            audio.load();
-            audio.play();
-    })*/
+
+    //animasjon - - - - - - - - - - - - - - - - - - - - 
+    //koble til css
+
+    const norsksverd = document.getElementById("norsksverd");
+    const langtsverd = document.getElementById("langtsverd");
+
+    function animer(karakter,animasjon) {
+        karakter.classList.remove(animasjon);
+        void karakter.offsetWidth;
+        karakter.classList.add(animasjon);
+    }
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

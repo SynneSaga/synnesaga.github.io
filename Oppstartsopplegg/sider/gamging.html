@@ -20,12 +20,20 @@
             </div>
         </div>
 
+        <div id="animer">
+            <img id="norsksverd" src="bilder/norsksverd.png" style="width:100px;">
+            <img id="langtsverd" src="bilder/fiendesverd.png" style="width:100px;">
+        </div>
+
         <div class="info">
             <p id="status">Waiting for your next move...</p>
         </div>
+
+        
         
     </div>
     <div id="attackarea">
+        
         <button id="angrip" onclick="enRunde()">Attack!<img id="bilde" src="bilder/sverd.png"> </button>
     </div>
     <div id="meny">
@@ -53,8 +61,9 @@
     <div id="musikkboks">
         <p style="margin:0;">Now playing...</p>
         <p style="margin:5px 0px;" id="nowPlay"></p>
-        <button id="playBtn"><i class="fas fa-play"></i></button>
+        <audio id="audioelement" controls></audio>
     </div>
+    <script type="text/javascript" src="java/gamging.js"></script><!--alltid bruk src-->
 </body>
-<script type="text/javascript" src="java/gamging.js"></script><!--alltid bruk src-->
+
 </html>
