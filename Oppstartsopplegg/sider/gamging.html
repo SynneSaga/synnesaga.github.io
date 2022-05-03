@@ -7,25 +7,26 @@
     <link type="text/css" rel="stylesheet" href="css/gamging.css">
     <title>Document</title>
 </head>
-<body>
+<body >
 
     <div id="stats">
 
         <div id="health">
             <div id="myside">
-                <p id="myhp">My HP: 100</p>
+                <p id="myhp">My HP: </p>
             </div>
             <div id="enemyside">
-                <p id="enemyhp">Sweden's HP: 100</p>
+                <p id="enemyhp">Sweden's HP: </p>
             </div>
         </div>
 
         <div id="animer">
             <img id="norsksverd" src="bilder/norsksverd.png" style="width:100px;">
-            <img id="langtsverd" src="bilder/fiendesverd.png" style="width:100px;">
+            <img id="fiendesverd" src="bilder/fiendesverd.png" style="width:100px;">
         </div>
 
         <div class="info">
+            <image id="scener"></image>
             <p id="status">Waiting for your next move...</p>
         </div>
 
@@ -36,8 +37,8 @@
         
         <button id="angrip" onclick="enRunde()">Attack!<img id="bilde" src="bilder/sverd.png"> </button>
     </div>
-    <div id="meny">
-        <select id="enemies" onchange="endreFlagg()">
+    <div id="meny" onchange="endreFlagg()">
+        <select id="enemies">
             <option>Velg fiende</option> 
             <option>Sverige</option>
             <option>Danmark</option>
@@ -57,11 +58,23 @@
             <option>Dark</option>
             <option>Light</option>
         </select>
+        <select id="difficulty">
+            <option>Velg vanskelighetsgrad</option> 
+            <option>Easy</option>
+            <option>Normal</option>
+            <option>Hard</option>
+        </select>
     </div>
     <div id="musikkboks">
-        <p style="margin:0;">Now playing...</p>
+        <p style="margin:0;">Now playing:</p>
         <p style="margin:5px 0px;" id="nowPlay"></p>
-        <audio id="audioelement" controls></audio>
+        <audio id="audioelement"></audio> <!--Istedenfor controls, bruk de nedenfor-->
+        <div> 
+            <button onclick="document.getElementById('audioelement').play()">Play</button> 
+            <button onclick="document.getElementById('audioelement').pause()">Pause</button> 
+            <button onclick="document.getElementById('audioelement').volume += 0.1">Vol +</button> 
+            <button onclick="document.getElementById('audioelement').volume -= 0.1">Vol -</button> 
+          </div>
     </div>
     <script type="text/javascript" src="java/gamging.js"></script><!--alltid bruk src-->
 </body>
