@@ -9,7 +9,12 @@ var lengde = parseInt(prompt("Og hvor mange ord?:flushed:"));
 
 function lagSetning(namn,lengde){
     var setningUt = "Kjære <span class='namn'>" + namn  + "</span>" + ", du er ";
-    if (lengde <= ordliste.length) {
+
+        if (lengde > ordliste.length) {
+            alert("I am all out of words :pensive:")
+            lengde = ordliste.length;
+        }
+
         for (let i = 0; i < lengde ; i++) {
             let plass = tilfeldigTall(0,ordliste.length-1);
             let ord = ordliste[plass];
@@ -28,11 +33,9 @@ function lagSetning(namn,lengde){
                     setningUt += ord + ", ";
                 }
             }
-        }
+        
     }
-    else if (lengde > ordliste.length) {
-        alert("I am all out of words :pensive:")
-    }
+    
     
     document.getElementById("ord").innerHTML = setningUt;
 }

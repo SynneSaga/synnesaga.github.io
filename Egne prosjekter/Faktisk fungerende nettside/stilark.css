@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+header {
+    background-color: rgb(161, 232, 209);
+    flex:1;
+    
+}
+
+.boks {
+    flex:1;
+}

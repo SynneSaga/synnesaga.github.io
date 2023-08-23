@@ -1,6 +1,11 @@
 function startTime() {
-    const today = new Date();
-    let d = today.getDate();
+    const today = new Date(); 
+
+    let start = new Date(today.getFullYear(), 0, 0);
+    let diff = today - start;
+    let oneDay = 1000 * 60 * 60 * 24;
+    let d = Math.floor(diff / oneDay);
+
     let h = today.getHours();
     let m = today.getMinutes();
     let s = today.getSeconds();
@@ -12,6 +17,7 @@ function startTime() {
     let decH = 23 - h;
     let decM = 59 - m;
     let decS = 59 - s;
+    
     //sekunder
     if (decS < 10){
         decS = "0" + decS;
@@ -39,9 +45,13 @@ function startTime() {
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  
   return i;
+
+  
 }
 
+
 //Musikk
+
 
 
 var arraySanger = ["All I want for Christmas is you - MCR","Himmel på jord - Kurt Nilsen","Peace on Earth - David Bowie and Bing Crosby"]

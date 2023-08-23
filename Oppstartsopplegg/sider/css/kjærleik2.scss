@@ -55,7 +55,7 @@ body {
     opacity: 0.8;
   }
 
-  //Framste
+  //Fremste
   &:after {
     filter: blur(1px);
     top: -1500%;
@@ -66,7 +66,7 @@ body {
   }
 }
 
-//bakerste
+//Bakerste
 .more-snow {
   &:before {
     filter: blur(4px);
